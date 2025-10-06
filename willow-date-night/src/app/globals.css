@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Craftwork Grotesque Font Face */
+@font-face {
+  font-family: 'Craftwork Grotesque';
+  src: url('/fonts/CraftworkGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Craftwork Grotesque';
+  src: url('/fonts/CraftworkGrotesk-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Craftwork Grotesque';
+  src: url('/fonts/CraftworkGrotesk-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Craftwork Grotesque';
+  src: url('/fonts/CraftworkGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Craftwork Grotesque';
+  src: url('/fonts/CraftworkGrotesk-Heavy.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Craftwork Grotesque', 'Space Grotesk', sans-serif;
+  background-color: #1A1A1A;
+  color: #FFFFFF;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Custom CSS Variables */
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 26, 26, 26;
+  --background-end-rgb: 26, 26, 26;
+  --willow-neon-green: #00FFAA;
+  --willow-dark-bg: #1A1A1A;
+  --willow-gray: #A0A0A0;
+  --willow-card-white: #FFFFFF;
+  --willow-light: #F8F9FA;
+  --willow-light-gray: #E9ECEF;
+  --willow-dark-gray: #495057;
+}
+
+/* Dark theme (default) */
+.dark {
+  --background: #1A1A1A;
+  --foreground: #FFFFFF;
+  --card-bg: #FFFFFF;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A0;
+  --border: rgba(255, 255, 255, 0.1);
+  --overlay: rgba(0, 0, 0, 0.8);
+}
+
+/* Light theme */
+.light {
+  --background: #F8F9FA;
+  --foreground: #1A1A1A;
+  --card-bg: #FFFFFF;
+  --text-primary: #1A1A1A;
+  --text-secondary: #495057;
+  --border: rgba(0, 0, 0, 0.1);
+  --overlay: rgba(255, 255, 255, 0.9);
+}
+
+/* Willow Brand Colors */
+.text-willow-green {
+  color: var(--willow-neon-green);
+}
+
+.bg-willow-green {
+  background-color: var(--willow-neon-green);
+}
+
+.border-willow-green {
+  border-color: var(--willow-neon-green);
+}
+
+.bg-willow-dark {
+  background-color: var(--willow-dark-bg);
+}
+
+.text-willow-gray {
+  color: var(--willow-gray);
+}
+
+/* Card Styles */
+.willow-card {
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+  background: var(--willow-card-white);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.willow-card-stack {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+/* Mobile Card Adjustments */
+@media (max-width: 640px) {
+  .willow-card {
+    width: 90vw;
+    max-width: 350px;
+    height: 450px;
+    border-radius: 16px;
+  }
+  
+  .willow-card-stack {
+    width: 90vw;
+    max-width: 350px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .willow-card {
+    width: 85vw;
+    max-width: 320px;
+    height: 420px;
+    border-radius: 14px;
+  }
+  
+  .willow-card-stack {
+    width: 85vw;
+    max-width: 320px;
+    height: 420px;
+  }
+}
+
+/* Theme-aware utility classes */
+.bg-theme {
+  background-color: var(--background);
+}
+
+.text-theme-primary {
+  color: var(--text-primary);
+}
+
+.text-theme-secondary {
+  color: var(--text-secondary);
+}
+
+.border-theme {
+  border-color: var(--border);
+}
+
+.bg-overlay {
+  background-color: var(--overlay);
+}
+
+/* Theme-aware card styles */
+.willow-card {
+  background: var(--card-bg);
+  color: var(--text-primary);
+}
+
+/* Theme-aware button styles */
+.btn-willow {
+  background: var(--willow-neon-green);
+  color: var(--willow-dark-bg);
+  border: 2px solid var(--willow-neon-green);
+}
+
+.btn-willow:hover {
+  background: transparent;
+  color: var(--willow-neon-green);
+}
+
+.btn-willow-outline {
+  background: transparent;
+  color: var(--willow-neon-green);
+  border: 2px solid var(--willow-neon-green);
+}
+
+.btn-willow-outline:hover {
+  background: var(--willow-neon-green);
+  color: var(--willow-dark-bg);
+}
+
+/* Mobile Touch Optimizations */
+@media (max-width: 768px) {
+  /* Prevent zoom on input focus */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+  
+  /* Better touch targets */
+  button, .btn-willow, .btn-willow-outline {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent text selection on drag elements */
+  .willow-card {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Better scroll behavior */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Prevent bounce scroll on iOS */
+  body {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.willow-card-stack .willow-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.willow-card-stack .willow-card:nth-child(1) {
+  z-index: 30;
+}
+
+.willow-card-stack .willow-card:nth-child(2) {
+  z-index: 20;
+  transform: translate(8px, 8px) rotate(1deg);
+  pointer-events: none;
+}
+
+.willow-card-stack .willow-card:nth-child(3) {
+  z-index: 10;
+  transform: translate(16px, 16px) rotate(-1deg);
+  pointer-events: none;
+}
+
+/* Intimacy Meter */
+.intimacy-meter {
+  width: 50px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.intimacy-fill {
+  width: 100%;
+  background: var(--willow-neon-green);
+  border-radius: 25px;
+  transition: height 0.5s ease;
+  position: absolute;
+  bottom: 0;
+}
+
+.intimacy-fill.pulse {
+  animation: pulse-heart 1s ease-in-out infinite;
+}
+
+@keyframes pulse-heart {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+/* Swipe Animations */
+.swipe-left {
+  transform: translateX(-100vw) rotate(-30deg);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.swipe-right {
+  transform: translateX(100vw) rotate(30deg);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* Button Styles */
+.btn-willow {
+  background: var(--willow-neon-green);
+  color: var(--willow-dark-bg);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Craftwork Grotesque', 'Space Grotesk', sans-serif;
+}
+
+.btn-willow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 170, 0.3);
+}
+
+.btn-willow-outline {
+  background: transparent;
+  color: var(--willow-neon-green);
+  border: 2px solid var(--willow-neon-green);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Craftwork Grotesque', 'Space Grotesk', sans-serif;
+}
+
+.btn-willow-outline:hover {
+  background: var(--willow-neon-green);
+  color: var(--willow-dark-bg);
+}
+
+/* Typography */
+.font-craftwork {
+  font-family: 'Craftwork Grotesque', 'Space Grotesk', sans-serif;
+}
+
+.font-craftwork-heavy {
+  font-family: 'Craftwork Grotesque', 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .willow-card {
+    width: 350px;
+    height: 450px;
+  }
+  
+  .willow-card-stack {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .willow-card {
+    width: 300px;
+    height: 400px;
+  }
+  
+  .willow-card-stack {
+    min-height: 450px;
+  }
+}
+
+/* PWA Styles */
+.install-prompt {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--willow-card-white);
+  color: var(--willow-dark-bg);
+  padding: 15px 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateX(-50%) translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Loading States */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid var(--willow-neon-green);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--willow-card-white);
+  color: var(--willow-dark-bg);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Star Rating */
+.star-rating {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.star {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.star:hover,
+.star.active {
+  color: var(--willow-neon-green);
+  transform: scale(1.1);
+}
+
+/* Voice Input */
+.voice-input {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.voice-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--willow-neon-green);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.voice-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 255, 170, 0.3);
+}
+
+.voice-button.recording {
+  animation: pulse-recording 1s ease-in-out infinite;
+}
+
+@keyframes pulse-recording {
+  0%, 100% {
+    background: var(--willow-neon-green);
+  }
+  50% {
+    background: #ff4444;
+  }
+}

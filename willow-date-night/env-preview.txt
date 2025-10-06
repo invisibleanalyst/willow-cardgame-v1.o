@@ -1,0 +1,25 @@
+# Copy this content to .env.local file in the root directory
+
+# Clerk Authentication (placeholder values for preview)
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_placeholder_key_for_preview_only
+CLERK_SECRET_KEY=sk_test_placeholder_key_for_preview_only
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/game
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/game
+
+# Supabase (placeholder values)
+NEXT_PUBLIC_SUPABASE_URL=https://placeholder.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=placeholder_anon_key
+SUPABASE_SERVICE_ROLE_KEY=placeholder_service_role_key
+
+# OpenAI (placeholder - will use fallback)
+OPENAI_API_KEY=placeholder_openai_key
+
+# Paystack (placeholder values)
+NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY=pk_test_placeholder_paystack_key
+PAYSTACK_SECRET_KEY=sk_test_placeholder_paystack_key
+
+# App Configuration
+NEXT_PUBLIC_APP_URL=http://localhost:3001
+NEXT_PUBLIC_APP_NAME=Willow Date Night Edition
