@@ -9,8 +9,9 @@ export default function ThemeToggle() {
   // Handle case where context might not be available
   if (!themeContext) {
     return (
-      <div className="relative w-12 h-6 bg-willow-gray bg-opacity-30 rounded-full p-1">
-        <div className="absolute top-1 w-4 h-4 bg-white rounded-full shadow-lg flex items-center justify-center">
+      <div className="relative w-14 h-7 bg-black bg-opacity-40 backdrop-blur-md rounded-full p-1 border border-white border-opacity-10 shadow-lg">
+        <div className="w-full h-full rounded-full bg-gradient-to-r from-willow-dark to-willow-gray opacity-30"></div>
+        <div className="absolute top-0.5 w-6 h-6 bg-white rounded-full shadow-lg flex items-center justify-center">
           <div className="text-xs">🌙</div>
         </div>
       </div>
@@ -22,19 +23,19 @@ export default function ThemeToggle() {
   return (
     <motion.button
       onClick={toggleTheme}
-      className="relative w-12 h-6 bg-willow-gray bg-opacity-30 rounded-full p-1 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-willow-green focus:ring-opacity-50"
+      className="relative w-14 h-7 bg-black bg-opacity-40 backdrop-blur-md rounded-full p-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-willow-green focus:ring-opacity-50 border border-white border-opacity-10 shadow-lg"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
     >
-      {/* Toggle Track */}
-      <div className="w-full h-full rounded-full bg-gradient-to-r from-willow-dark to-willow-gray opacity-20"></div>
+      {/* Toggle Track Background */}
+      <div className="w-full h-full rounded-full bg-gradient-to-r from-willow-dark to-willow-gray opacity-30"></div>
       
       {/* Toggle Button */}
       <motion.div
-        className="absolute top-1 w-4 h-4 bg-white rounded-full shadow-lg flex items-center justify-center"
+        className="absolute top-0.5 w-6 h-6 bg-white rounded-full shadow-lg flex items-center justify-center"
         animate={{
-          x: theme === 'dark' ? 0 : 24,
+          x: theme === 'dark' ? 0 : 28,
         }}
         transition={{
           type: "spring",
@@ -58,7 +59,7 @@ export default function ThemeToggle() {
       
       {/* Background gradient based on theme */}
       <motion.div
-        className="absolute inset-0 rounded-full opacity-20"
+        className="absolute inset-0 rounded-full opacity-10"
         animate={{
           background: theme === 'dark' 
             ? 'linear-gradient(135deg, #1A1A1A 0%, #00FFAA 100%)'

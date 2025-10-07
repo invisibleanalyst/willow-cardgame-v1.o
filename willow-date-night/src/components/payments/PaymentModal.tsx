@@ -7,7 +7,7 @@ import { usePaystackPayment } from 'react-paystack';
 interface PaymentModalProps {
   isOpen: boolean;
   onClose: () => void;
-  packType: 'romantic-escape' | 'beta-pass';
+  packType: 'romantic-escape' | 'premium' | 'beta-pass';
   onSuccess: (packType: string) => void;
 }
 
@@ -21,14 +21,27 @@ export default function PaymentModal({ isOpen, onClose, packType, onSuccess }: P
       price: 650,
       currency: 'KES',
       features: [
-        '200 prompts across 5 themes',
-        'Flirty Nights collection',
-        'Memory Lane prompts',
-        'Adventurous Love questions',
-        'Sweet Nothings whispers',
-        'Future Dreams exploration',
+        'All 3 tiers unlocked (335+ prompts)',
+        'Full Vibe Check (100 prompts)',
+        'Full Lock-In Level (200 prompts)',
+        'Unlimited sessions',
+        'Advanced intimacy tracking',
+        'AI adaptive nudging',
+        'Progressive tier unlocking'
+      ]
+    },
+    'premium': {
+      name: 'Premium Experience',
+      price: 3000,
+      currency: 'KES',
+      features: [
+        'Everything in Romantic Escape',
+        'Exclusive premium prompts',
         'AI voice responses',
-        'Unlimited sessions'
+        'Advanced relationship analytics',
+        'Priority support',
+        'Founder badge & recognition',
+        'Early access to new features'
       ]
     },
     'beta-pass': {

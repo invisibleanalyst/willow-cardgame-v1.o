@@ -31,9 +31,10 @@ A romantic couple's game app built with Next.js, designed to spark love and joy 
 - **Smart Progression** - AI helps guide your relationship journey
 
 ### 💳 **Monetization Ready**
-- **Free Tier** - Full Spark mode, limited Vibe Check/Lock-In
-- **In-App Purchases** - Romantic Escape Pack (KES 650)
-- **Beta Pass** - Early access (KES 1,300)
+- **Free Tier** - Full Spark mode (35 prompts), limited Vibe Check/Lock-In
+- **Romantic Escape Pack** - All tiers unlocked (KES 650)
+- **Premium Experience** - Advanced features & exclusive content (KES 3,000)
+- **Beta Pass** - Early access & lifetime features (KES 1,300)
 - **Paystack Integration** - Optimized for Kenya (M-PESA support)
 
 ## 🚀 Quick Start

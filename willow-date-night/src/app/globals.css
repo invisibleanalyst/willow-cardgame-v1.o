@@ -95,9 +95,12 @@ a {
   --foreground: #FFFFFF;
   --card-bg: #FFFFFF;
   --text-primary: #FFFFFF;
-  --text-secondary: #A0A0A0;
+  --text-secondary: #E0E0E0;
+  --text-muted: #B0B0B0;
   --border: rgba(255, 255, 255, 0.1);
   --overlay: rgba(0, 0, 0, 0.8);
+  --accent-text: #FFFFFF;
+  --accent-bg: rgba(0, 255, 170, 0.1);
 }
 
 /* Light theme */
@@ -106,9 +109,12 @@ a {
   --foreground: #1A1A1A;
   --card-bg: #FFFFFF;
   --text-primary: #1A1A1A;
-  --text-secondary: #495057;
+  --text-secondary: #2D3748;
+  --text-muted: #4A5568;
   --border: rgba(0, 0, 0, 0.1);
   --overlay: rgba(255, 255, 255, 0.9);
+  --accent-text: #1A1A1A;
+  --accent-bg: rgba(0, 255, 170, 0.05);
 }
 
 /* Willow Brand Colors */
@@ -122,6 +128,15 @@ a {
 
 .border-willow-green {
   border-color: var(--willow-neon-green);
+}
+
+/* Modern bright teal for buttons */
+.bg-willow-bright {
+  background-color: #00FFC0;
+}
+
+.text-willow-bright {
+  color: #00FFC0;
 }
 
 .bg-willow-dark {
@@ -196,12 +211,48 @@ a {
   color: var(--text-secondary);
 }
 
+.text-theme-muted {
+  color: var(--text-muted);
+}
+
 .border-theme {
   border-color: var(--border);
 }
 
 .bg-overlay {
   background-color: var(--overlay);
+}
+
+/* High contrast text for better readability */
+.text-high-contrast {
+  color: var(--text-primary);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.text-accent-high-contrast {
+  color: var(--accent-text);
+  background: var(--accent-bg);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+}
+
+/* Better contrast for green text on backgrounds */
+.text-willow-green-contrast {
+  color: var(--willow-neon-green);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode specific contrast improvements */
+.dark .text-willow-green-contrast {
+  color: #00FFAA;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Light mode specific contrast improvements */
+.light .text-willow-green-contrast {
+  color: #00A080;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 /* Theme-aware card styles */
@@ -213,24 +264,56 @@ a {
 /* Theme-aware button styles */
 .btn-willow {
   background: var(--willow-neon-green);
-  color: var(--willow-dark-bg);
+  color: #000000;
   border: 2px solid var(--willow-neon-green);
+  font-weight: 600;
+  text-shadow: none;
 }
 
 .btn-willow:hover {
   background: transparent;
   color: var(--willow-neon-green);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .btn-willow-outline {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.1);
   color: var(--willow-neon-green);
   border: 2px solid var(--willow-neon-green);
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .btn-willow-outline:hover {
   background: var(--willow-neon-green);
-  color: var(--willow-dark-bg);
+  color: #000000;
+  text-shadow: none;
+}
+
+/* Dark mode button improvements */
+.dark .btn-willow-outline {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--willow-neon-green);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.dark .btn-willow-outline:hover {
+  background: var(--willow-neon-green);
+  color: #000000;
+  text-shadow: none;
+}
+
+/* Light mode button improvements */
+.light .btn-willow-outline {
+  background: rgba(0, 0, 0, 0.05);
+  color: #00A080;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.light .btn-willow-outline:hover {
+  background: #00A080;
+  color: #FFFFFF;
+  text-shadow: none;
 }
 
 /* Mobile Touch Optimizations */
@@ -263,7 +346,7 @@ a {
   }
   
   /* Prevent bounce scroll on iOS */
-  body {
+body {
     overscroll-behavior: none;
     -webkit-overflow-scrolling: touch;
   }
@@ -395,16 +478,99 @@ a {
   .willow-card-stack {
     min-height: 500px;
   }
+  
+  .intimacy-meter {
+    width: 40px;
+    height: 250px;
+  }
 }
 
 @media (max-width: 480px) {
   .willow-card {
-    width: 300px;
+    width: 90vw;
+    max-width: 320px;
     height: 400px;
   }
   
   .willow-card-stack {
     min-height: 450px;
+    padding: 0 1rem;
+  }
+  
+  .intimacy-meter {
+    width: 35px;
+    height: 200px;
+  }
+  
+  /* Mobile header adjustments */
+  header {
+    padding: 1rem;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  /* Mobile game layout */
+  .game-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  /* Mobile tier selector */
+  .tier-selector {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: 2rem;
+  }
+  
+  /* Mobile modal adjustments */
+  .modal-content {
+    width: 95%;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  /* Mobile button adjustments */
+  .btn-willow {
+    padding: 12px 16px;
+    font-size: 14px;
+    min-height: 44px; /* iOS recommended touch target */
+  }
+  
+  .btn-willow-outline {
+    padding: 12px 16px;
+    font-size: 14px;
+    min-height: 44px; /* iOS recommended touch target */
+  }
+  
+  /* Mobile text adjustments */
+  .font-craftwork-heavy {
+    font-size: 1.5rem;
+  }
+  
+  /* Mobile card text */
+  .willow-card h2 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  
+  /* Mobile swipe indicators */
+  .willow-card .swipe-indicators {
+    font-size: 0.875rem;
+  }
+  
+  /* Mobile safe area for notched devices */
+  .mobile-safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .mobile-safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
   }
 }
 

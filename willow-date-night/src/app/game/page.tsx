@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import { CloseIcon } from '@/components/Icons';
 import ThemeToggle from '@/components/ThemeToggle';
 import GameCard from '@/components/GameCard';
@@ -121,13 +122,14 @@ export default function GamePage() {
 
       {/* Header */}
       <header className="flex justify-between items-center p-4 sm:p-6 border-b border-theme flex-shrink-0">
-        <div className="flex items-center gap-2 sm:gap-3">
+        <Link href="/" className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity duration-200">
           <div className="w-8 h-8 sm:w-10 sm:h-10 bg-willow-green rounded-full flex items-center justify-center shadow-lg">
             <span className="text-willow-dark font-bold text-lg sm:text-xl">W</span>
           </div>
           <h1 className="font-craftwork-heavy text-xl sm:text-2xl text-willow-green">Willow</h1>
-        </div>
+        </Link>
         <div className="flex items-center gap-3 sm:gap-6">
+          <ThemeToggle />
           <div className="flex items-center gap-2 bg-black bg-opacity-30 px-2 sm:px-3 py-1 sm:py-2 rounded-full">
             <span className="font-craftwork text-willow-gray text-xs sm:text-sm">
               {answers.length} answered

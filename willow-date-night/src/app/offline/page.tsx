@@ -76,7 +76,7 @@ export default function OfflinePage() {
               <span>View your intimacy progress</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-willow-green rounded-full"></span>
+              <div className="w-2 h-2 bg-willow-green rounded-full"></div>
               <span>Practice with sample questions</span>
             </div>
           </div>

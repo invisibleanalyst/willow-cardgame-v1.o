@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { HeartIcon, SwirlIcon, FlameIcon, ArrowRightIcon, StarIcon, PlayIcon, UsersIcon, CheckIcon, ArrowUpRightIcon, ConnectionIcon, GrowthIcon, SparkIcon, FlowIcon } from '@/components/Icons';
+import { HeartIcon, SwirlIcon, FlameIcon, ArrowRightIcon, StarIcon, PlayIcon, UsersIcon, CheckIcon, ArrowUpRightIcon, ConnectionIcon, GrowthIcon, SparkIcon, FlowIcon, MessageIcon, BrainIcon, TargetIcon } from '@/components/Icons';
 import ThemeToggle from '@/components/ThemeToggle';
 
 export default function Home() {
@@ -82,15 +82,18 @@ export default function Home() {
 
       {/* Header */}
       <header className="flex justify-between items-center p-6">
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-200">
           <div className="w-8 h-8 bg-willow-green rounded-full flex items-center justify-center">
             <span className="text-willow-dark font-bold text-lg">W</span>
           </div>
           <h1 className="font-craftwork-heavy text-2xl text-willow-green">Willow</h1>
-        </div>
-        <Link href="/game" className="btn-willow-outline">
-          What's Next? ↗
         </Link>
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <Link href="/game" className="btn-willow-outline">
+            What's Next? ↗
+          </Link>
+        </div>
       </header>
 
       {/* Hero Section - Redesigned */}
@@ -110,9 +113,9 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <h1 className="font-craftwork-heavy text-5xl md:text-7xl mb-6 leading-tight">
+            <h1 className="font-craftwork-heavy text-5xl md:text-7xl mb-6 leading-tight text-high-contrast">
               Turn your{' '}
-              <span className="text-willow-green relative">
+              <span className="text-willow-green-contrast relative">
                 date night
                 <motion.div
                   className="absolute -bottom-2 left-0 right-0 h-1 bg-willow-green opacity-30"
@@ -123,7 +126,7 @@ export default function Home() {
               </span>
               <br />
               into something{' '}
-              <span className="text-willow-green">magical</span>
+              <span className="text-willow-green-contrast">magical</span>
             </h1>
           </motion.div>
 
@@ -134,25 +137,25 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-12"
           >
-            <p className="font-craftwork text-xl md:text-2xl text-willow-gray mb-6 max-w-3xl mx-auto leading-relaxed">
+            <p className="font-craftwork text-xl md:text-2xl text-theme-secondary mb-6 max-w-3xl mx-auto leading-relaxed">
               The only app that transforms awkward silences into{' '}
-              <span className="text-willow-green font-medium">deep connections</span>{' '}
+              <span className="text-accent-high-contrast font-medium">deep connections</span>{' '}
               through playful prompts designed for couples
             </p>
             
             {/* Key Benefits */}
             <div className="flex flex-wrap justify-center gap-6 mb-8">
-              <div className="flex items-center gap-2 bg-black bg-opacity-30 px-4 py-2 rounded-full">
+              <div className="flex items-center gap-2 bg-theme bg-opacity-40 backdrop-blur-md border border-theme px-4 py-2 rounded-full">
                 <HeartIcon className="w-6 h-6 text-willow-green" />
-                <span className="font-craftwork text-sm">Deepen your bond</span>
+                <span className="font-craftwork text-sm text-theme-primary">Deepen your bond</span>
               </div>
-              <div className="flex items-center gap-2 bg-black bg-opacity-30 px-4 py-2 rounded-full">
+              <div className="flex items-center gap-2 bg-theme bg-opacity-40 backdrop-blur-md border border-theme px-4 py-2 rounded-full">
                 <ConnectionIcon className="w-6 h-6 text-willow-green" />
-                <span className="font-craftwork text-sm">Fun & interactive</span>
+                <span className="font-craftwork text-sm text-theme-primary">Fun & interactive</span>
               </div>
-              <div className="flex items-center gap-2 bg-black bg-opacity-30 px-4 py-2 rounded-full">
+              <div className="flex items-center gap-2 bg-theme bg-opacity-40 backdrop-blur-md border border-theme px-4 py-2 rounded-full">
                 <GrowthIcon className="w-6 h-6 text-willow-green" />
-                <span className="font-craftwork text-sm">Progressive intimacy</span>
+                <span className="font-craftwork text-sm text-theme-primary">Progressive intimacy</span>
               </div>
             </div>
           </motion.div>
@@ -179,18 +182,18 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-center"
           >
-            <p className="font-craftwork text-willow-gray text-sm mb-2">
+            <p className="font-craftwork text-theme-secondary text-sm mb-2">
               Join 1,000+ couples already deepening their connection
             </p>
             <div className="flex justify-center items-center gap-2">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <div key={i} className="w-8 h-8 bg-willow-green rounded-full flex items-center justify-center text-willow-dark font-bold text-xs">
+                  <div key={i} className="w-8 h-8 bg-willow-green rounded-full flex items-center justify-center text-black font-bold text-xs shadow-lg">
                     {i}
                   </div>
                 ))}
               </div>
-              <span className="font-craftwork text-willow-gray text-sm ml-2">
+              <span className="font-craftwork text-theme-secondary text-sm ml-2">
                 + 995 more couples
               </span>
             </div>
@@ -207,10 +210,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h3 className="font-craftwork-heavy text-4xl mb-6">
-              How <span className="text-willow-green">Willow</span> Works
+            <h3 className="font-craftwork-heavy text-4xl mb-6 text-high-contrast">
+              How <span className="text-willow-green-contrast">Willow</span> Works
             </h3>
-            <p className="font-craftwork text-willow-gray text-xl max-w-3xl mx-auto">
+            <p className="font-craftwork text-theme-secondary text-xl max-w-3xl mx-auto">
               Three progressive tiers that take you from first-date butterflies to deep, meaningful connections
             </p>
           </motion.div>
@@ -226,8 +229,8 @@ export default function Home() {
               <div className="w-16 h-16 bg-willow-green rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-willow-dark font-bold text-2xl">1</span>
               </div>
-              <h4 className="font-craftwork-heavy text-xl mb-2">Swipe & Connect</h4>
-              <p className="font-craftwork text-willow-gray">
+              <h4 className="font-craftwork-heavy text-xl mb-2 text-theme-primary">Swipe & Connect</h4>
+              <p className="font-craftwork text-theme-secondary">
                 Swipe through prompts designed to spark conversation and break the ice
               </p>
             </motion.div>
@@ -240,8 +243,8 @@ export default function Home() {
               <div className="w-16 h-16 bg-willow-green rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-willow-dark font-bold text-2xl">2</span>
               </div>
-              <h4 className="font-craftwork-heavy text-xl mb-2">Build Intimacy</h4>
-              <p className="font-craftwork text-willow-gray">
+              <h4 className="font-craftwork-heavy text-xl mb-2 text-theme-primary">Build Intimacy</h4>
+              <p className="font-craftwork text-theme-secondary">
                 Watch your connection deepen as you unlock more meaningful prompts
               </p>
             </motion.div>
@@ -254,8 +257,8 @@ export default function Home() {
               <div className="w-16 h-16 bg-willow-green rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-willow-dark font-bold text-2xl">3</span>
               </div>
-              <h4 className="font-craftwork-heavy text-xl mb-2">Lock In Love</h4>
-              <p className="font-craftwork text-willow-gray">
+              <h4 className="font-craftwork-heavy text-xl mb-2 text-theme-primary">Lock In Love</h4>
+              <p className="font-craftwork text-theme-secondary">
                 Reach the deepest level of connection with prompts for committed couples
               </p>
             </motion.div>
@@ -425,96 +428,117 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-6 bg-black bg-opacity-30">
-        <div className="max-w-6xl mx-auto">
+      {/* Early Access Section */}
+      <section className="py-20 px-6 bg-black relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-willow-green opacity-5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500 opacity-5 rounded-full blur-2xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500 opacity-3 rounded-full blur-xl"></div>
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h3 className="font-craftwork-heavy text-4xl mb-6">
-              What Couples Are <span className="text-willow-green">Saying</span>
+            <h3 className="font-craftwork-heavy text-4xl md:text-5xl mb-6 text-high-contrast">
+              Be Among the <span className="text-willow-green-contrast">First</span> to Experience Willow
             </h3>
+            <p className="font-craftwork text-theme-secondary text-xl max-w-3xl mx-auto leading-relaxed">
+              Join our growing community of couples who are rediscovering connection, one prompt at a time.
+            </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white bg-opacity-10 p-6 rounded-2xl border border-white border-opacity-20"
+              className="group bg-theme bg-opacity-50 backdrop-blur-md p-8 rounded-3xl border border-willow-green border-opacity-20 text-center hover:border-willow-green hover:border-opacity-40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-willow-green hover:shadow-opacity-10"
             >
-              <div className="flex items-center gap-1 mb-4">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <StarIcon key={i} className="w-5 h-5 text-willow-green" />
-                ))}
+              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-willow-green to-emerald-400 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <SparkIcon className="w-8 h-8 text-willow-dark" />
               </div>
-              <p className="font-craftwork text-willow-gray mb-4">
-                "Willow saved our date night! We went from awkward silences to deep conversations in minutes."
+              <h4 className="font-craftwork-heavy text-xl mb-4 text-theme-primary">335+ Prompts</h4>
+              <p className="font-craftwork text-theme-secondary text-sm leading-relaxed">
+                Carefully crafted questions designed by relationship experts to spark meaningful conversations
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-willow-green rounded-full flex items-center justify-center">
-                  <span className="text-willow-dark font-bold">A</span>
-                </div>
-                <div>
-                  <p className="font-craftwork-heavy text-sm">Alex & Sam</p>
-                  <p className="font-craftwork text-xs text-willow-gray">Together 2 years</p>
-                </div>
-              </div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white bg-opacity-10 p-6 rounded-2xl border border-white border-opacity-20"
+              className="group bg-theme bg-opacity-50 backdrop-blur-md p-8 rounded-3xl border border-purple-500 border-opacity-20 text-center hover:border-purple-500 hover:border-opacity-40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500 hover:shadow-opacity-10"
             >
-              <div className="flex items-center gap-1 mb-4">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <StarIcon key={i} className="w-5 h-5 text-willow-green" />
-                ))}
+              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <GrowthIcon className="w-8 h-8 text-white" />
               </div>
-              <p className="font-craftwork text-willow-gray mb-4">
-                "The intimacy meter is genius! We actually felt our connection grow stronger with each prompt."
+              <h4 className="font-craftwork-heavy text-xl mb-4 text-theme-primary">AI-Powered</h4>
+              <p className="font-craftwork text-theme-secondary text-sm leading-relaxed">
+                Smart sentiment analysis and adaptive nudging to help you go deeper with each conversation
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-willow-green rounded-full flex items-center justify-center">
-                  <span className="text-willow-dark font-bold">M</span>
-                </div>
-                <div>
-                  <p className="font-craftwork-heavy text-sm">Mike & Lisa</p>
-                  <p className="font-craftwork text-xs text-willow-gray">Together 6 months</p>
-                </div>
-              </div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-white bg-opacity-10 p-6 rounded-2xl border border-white border-opacity-20"
+              className="group bg-theme bg-opacity-50 backdrop-blur-md p-8 rounded-3xl border border-pink-500 border-opacity-20 text-center hover:border-pink-500 hover:border-opacity-40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500 hover:shadow-opacity-10"
             >
-              <div className="flex items-center gap-1 mb-4">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <StarIcon key={i} className="w-5 h-5 text-willow-green" />
-                ))}
+              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-pink-500 to-rose-400 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <FlowIcon className="w-8 h-8 text-white" />
               </div>
-              <p className="font-craftwork text-willow-gray mb-4">
-                "Finally, an app that understands what couples really need. The tier system is perfect!"
+              <h4 className="font-craftwork-heavy text-xl mb-4 text-theme-primary">Progressive Tiers</h4>
+              <p className="font-craftwork text-theme-secondary text-sm leading-relaxed">
+                From light icebreakers to deep intimacy building - unlock levels as your connection grows
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-willow-green rounded-full flex items-center justify-center">
-                  <span className="text-willow-dark font-bold">J</span>
-                </div>
-                <div>
-                  <p className="font-craftwork-heavy text-sm">Jordan & Taylor</p>
-                  <p className="font-craftwork text-xs text-willow-gray">Together 1 year</p>
-                </div>
-              </div>
             </motion.div>
           </div>
+
+          {/* Enhanced Call to Action */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-center"
+          >
+            <div className="bg-gradient-to-r from-willow-green to-emerald-400 bg-opacity-15 border border-willow-green border-opacity-40 rounded-3xl p-10 max-w-4xl mx-auto backdrop-blur-md relative overflow-hidden shadow-2xl shadow-willow-green shadow-opacity-10">
+              {/* Enhanced background pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-6 left-6 w-3 h-3 bg-willow-green rounded-full animate-pulse"></div>
+                <div className="absolute top-12 right-12 w-2 h-2 bg-emerald-300 rounded-full animate-pulse delay-1000"></div>
+                <div className="absolute bottom-8 left-12 w-2.5 h-2.5 bg-willow-green rounded-full animate-pulse delay-2000"></div>
+                <div className="absolute bottom-6 right-6 w-3 h-3 bg-emerald-300 rounded-full animate-pulse delay-500"></div>
+                <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-willow-green rounded-full animate-pulse delay-1500"></div>
+                <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 bg-emerald-300 rounded-full animate-pulse delay-3000"></div>
+              </div>
+              
+              {/* Subtle glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-willow-green to-emerald-400 opacity-5 rounded-3xl blur-xl"></div>
+              
+              <div className="relative z-10">
+                <h4 className="font-craftwork-heavy text-2xl md:text-3xl mb-4 text-theme-primary">
+                  Ready to transform your date nights?
+                </h4>
+                <p className="font-craftwork text-theme-secondary mb-8 text-lg leading-relaxed">
+                  Start your journey with Willow today and discover what meaningful connection feels like.
+                </p>
+                <Link 
+                  href="/game" 
+                  className="group inline-flex items-center gap-3 bg-willow-bright text-willow-dark px-8 py-4 rounded-2xl font-craftwork-heavy text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden"
+                >
+                  {/* Subtle glow effect */}
+                  <div className="absolute inset-0 bg-willow-bright opacity-20 blur-md group-hover:opacity-30 transition-opacity duration-300"></div>
+                  <span className="relative z-10">Start Playing Now</span>
+                  <ArrowUpRightIcon className="w-5 h-5 relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                </Link>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -553,7 +577,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Free Tier */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -569,7 +593,7 @@ export default function Home() {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-2">
                   <span className="text-willow-green">✓</span>
-                  <span className="font-craftwork text-sm">Full Spark Stage (15 prompts)</span>
+                  <span className="font-craftwork text-sm">Full Spark Stage (35 prompts)</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-willow-green">✓</span>
@@ -582,6 +606,10 @@ export default function Home() {
                 <li className="flex items-center gap-2">
                   <span className="text-willow-green">✓</span>
                   <span className="font-craftwork text-sm">1 session per day</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-willow-green">✓</span>
+                  <span className="font-craftwork text-sm">AI sentiment analysis</span>
                 </li>
               </ul>
               <Link href="/game" className="w-full btn-willow-outline text-center block">
@@ -603,21 +631,21 @@ export default function Home() {
               </div>
               <div className="text-center mb-6">
                 <h4 className="font-craftwork-heavy text-2xl mb-2">Romantic Escape</h4>
-                <div className="text-4xl font-craftwork-heavy text-willow-green mb-2">KES 650</div>
-                <p className="font-craftwork text-willow-gray">One-time payment</p>
+                <div className="text-4xl font-craftwork-heavy text-willow-dark mb-2">KES 650</div>
+                <p className="font-craftwork text-willow-dark opacity-75">One-time payment</p>
               </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-2">
                   <span className="text-willow-green">✓</span>
-                  <span className="font-craftwork text-sm">200 prompts across all tiers</span>
+                  <span className="font-craftwork text-sm">All 3 tiers unlocked (335+ prompts)</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-willow-green">✓</span>
-                  <span className="font-craftwork text-sm">5 themed collections</span>
+                  <span className="font-craftwork text-sm">Full Vibe Check (100 prompts)</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-willow-green">✓</span>
-                  <span className="font-craftwork text-sm">AI voice responses</span>
+                  <span className="font-craftwork text-sm">Full Lock-In Level (200 prompts)</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-willow-green">✓</span>
@@ -627,9 +655,61 @@ export default function Home() {
                   <span className="text-willow-green">✓</span>
                   <span className="font-craftwork text-sm">Advanced intimacy tracking</span>
                 </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-willow-green">✓</span>
+                  <span className="font-craftwork text-sm">AI adaptive nudging</span>
+                </li>
               </ul>
               <button className="w-full btn-willow text-center block">
                 Get Romantic Escape
+              </button>
+            </motion.div>
+
+            {/* Premium Tier */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="bg-gradient-to-br from-purple-600 to-pink-600 bg-opacity-20 p-8 rounded-2xl border-2 border-purple-500 relative"
+            >
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-craftwork-heavy">
+                  Premium
+                </div>
+              </div>
+              <div className="text-center mb-6">
+                <h4 className="font-craftwork-heavy text-2xl mb-2">Premium Experience</h4>
+                <div className="text-4xl font-craftwork-heavy text-willow-green mb-2">KES 3,000</div>
+                <p className="font-craftwork text-willow-gray">One-time payment</p>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-2">
+                  <span className="text-willow-green">✓</span>
+                  <span className="font-craftwork text-sm">Everything in Romantic Escape</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-willow-green">✓</span>
+                  <span className="font-craftwork text-sm">Exclusive premium prompts</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-willow-green">✓</span>
+                  <span className="font-craftwork text-sm">AI voice responses</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-willow-green">✓</span>
+                  <span className="font-craftwork text-sm">Advanced relationship analytics</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-willow-green">✓</span>
+                  <span className="font-craftwork text-sm">Priority support</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-willow-green">✓</span>
+                  <span className="font-craftwork text-sm">Founder badge & recognition</span>
+                </li>
+              </ul>
+              <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-lg font-craftwork-heavy hover:from-purple-600 hover:to-pink-600 transition-all duration-200">
+                Get Premium
               </button>
             </motion.div>
           </div>
@@ -644,15 +724,15 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="font-craftwork-heavy text-4xl mb-6">
-              Be the First to <span className="text-willow-green">Experience</span> Willow
+            <h3 className="font-craftwork-heavy text-4xl mb-6 text-high-contrast">
+              Be the First to <span className="text-willow-green-contrast">Experience</span> Willow
             </h3>
-            <p className="font-craftwork text-willow-gray text-xl mb-8 max-w-2xl mx-auto">
+            <p className="font-craftwork text-theme-secondary text-xl mb-8 max-w-2xl mx-auto">
               Join our exclusive beta and get early access to all features. 
               Help us shape the future of couple's gaming!
             </p>
             
-            <div className="bg-white bg-opacity-10 p-8 rounded-2xl border border-white border-opacity-20 max-w-md mx-auto">
+            <div className="bg-theme bg-opacity-40 backdrop-blur-md p-8 rounded-2xl border border-theme max-w-md mx-auto">
               <form onSubmit={handleBetaSignup} className="space-y-4">
                 <input
                   type="email"
@@ -660,7 +740,7 @@ export default function Home() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-willow-gray text-white placeholder-willow-gray focus:outline-none focus:border-willow-green"
+                  className="w-full px-4 py-3 rounded-lg bg-theme bg-opacity-60 border border-theme text-theme-primary placeholder-theme-muted focus:outline-none focus:border-willow-green focus:ring-2 focus:ring-willow-green focus:ring-opacity-50"
                 />
                 <button
                   type="submit"
@@ -687,12 +767,12 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
+              <Link href="/" className="flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity duration-200">
                 <div className="w-8 h-8 bg-willow-green rounded-full flex items-center justify-center">
                   <span className="text-willow-dark font-bold text-lg">W</span>
                 </div>
                 <h4 className="font-craftwork-heavy text-xl text-willow-green">Willow</h4>
-              </div>
+              </Link>
               <p className="font-craftwork text-willow-gray">
                 Useful rewards, easy gaming, designed for you. Willow.
               </p>

@@ -10,7 +10,7 @@ interface PricingCardProps {
   currency: string;
   features: string[];
   isPopular?: boolean;
-  packType: 'romantic-escape' | 'beta-pass';
+  packType: 'romantic-escape' | 'premium' | 'beta-pass';
   onPurchase: (packType: string) => void;
 }
 
