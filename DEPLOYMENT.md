@@ -246,3 +246,5 @@ npm run build
 **Deployment completed successfully!** 🎉
 
 Your Willow Talk Edition is now live at `https://willowtalk.live`
+
+

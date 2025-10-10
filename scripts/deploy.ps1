@@ -155,3 +155,5 @@ Write-Host "• Analyze bundle: npm run analyze"
 Write-Host "• Start production: npm start"
 Write-Host ""
 Write-Success "Deployment preparation completed! 🚀"
+
+

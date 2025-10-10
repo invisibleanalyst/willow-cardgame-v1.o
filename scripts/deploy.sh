@@ -149,3 +149,5 @@ echo "• Analyze bundle: npm run analyze"
 echo "• Start production: npm start"
 echo ""
 print_success "Deployment preparation completed! 🚀"
+
+
