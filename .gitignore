@@ -177,3 +177,4 @@ coverage/
 
 # Supabase
 .supabase/
+.vercel
