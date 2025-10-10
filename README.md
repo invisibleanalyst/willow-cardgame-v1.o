@@ -32,16 +32,16 @@
 
 ### Installation
 
-```bash
+   ```bash
 # Clone the repository
 git clone https://github.com/yourusername/willow-talk-edition.git
 cd willow-talk-edition
 
 # Install dependencies
-npm install
+   npm install
 
 # Copy environment variables
-cp env.template .env.local
+   cp env.template .env.local
 
 # Fill in your environment variables
 # See env.production.example for production values
