@@ -11,9 +11,14 @@ interface TierSelectorProps {
     lockin: boolean;
   };
   onTierChange: (tier: 'spark' | 'vibe' | 'lockin') => void;
+  tierStats?: {
+    spark: number;
+    vibe: number;
+    lockin: number;
+  };
 }
 
-export default function TierSelector({ currentTier, isUnlocked, onTierChange }: TierSelectorProps) {
+export default function TierSelector({ currentTier, isUnlocked, onTierChange, tierStats }: TierSelectorProps) {
   const tiers = [
     {
       id: 'spark' as const,
@@ -82,6 +87,13 @@ export default function TierSelector({ currentTier, isUnlocked, onTierChange }: 
           <p className="font-craftwork text-xs text-center opacity-80 hidden lg:block">
             {tier.description}
           </p>
+
+          {/* Question count */}
+          {tierStats && (
+            <div className="font-craftwork text-xs opacity-60">
+              {tierStats[tier.id]} questions
+            </div>
+          )}
 
           {/* Active indicator */}
           {currentTier === tier.id && (

@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { CloseIcon } from '@/components/Icons';
 import ThemeToggle from '@/components/ThemeToggle';
 import GameCard from '@/components/GameCard';
@@ -22,11 +23,15 @@ interface Answer {
   timestamp: Date;
 }
 
-export default function GamePage() {
+function GamePage() {
+  const searchParams = useSearchParams();
+  const category = searchParams.get('category') as 'squad' | 'ride-or-die' | null;
+  
   const [currentTier, setCurrentTier] = useState<'spark' | 'vibe' | 'lockin'>('spark');
   const [intimacyLevel, setIntimacyLevel] = useState(0);
   const [currentPromptIndex, setCurrentPromptIndex] = useState(0);
   const [answers, setAnswers] = useState<Answer[]>([]);
+  const [seenPrompts, setSeenPrompts] = useState<Set<string>>(new Set());
   const [showAnswerInput, setShowAnswerInput] = useState(false);
   const [showRating, setShowRating] = useState(false);
   const [showNudge, setShowNudge] = useState(false);
@@ -39,10 +44,58 @@ export default function GamePage() {
     lockin: false
   });
 
-  // Prompts are now imported from @/data/prompts
+  // Filter prompts based on category
+  const getFilteredPrompts = (tier: 'spark' | 'vibe' | 'lockin') => {
+    const tierPrompts = prompts[tier];
+    
+    if (category === 'squad') {
+      // For Squad Vibes, filter for friendship-appropriate questions
+      return tierPrompts.filter(prompt => {
+        // Check if prompt has categoryType and it's squad or both
+        if (prompt.categoryType) {
+          return prompt.categoryType === 'squad' || prompt.categoryType === 'both';
+        }
+        
+        // Fallback to text-based filtering for existing prompts
+        return !prompt.category.toLowerCase().includes('intimacy') &&
+               !prompt.category.toLowerCase().includes('romance') &&
+               !prompt.category.toLowerCase().includes('love') &&
+               !prompt.category.toLowerCase().includes('sexual') &&
+               !prompt.text.toLowerCase().includes('partner') &&
+               !prompt.text.toLowerCase().includes('relationship') &&
+               !prompt.text.toLowerCase().includes('our ') &&
+               !prompt.text.toLowerCase().includes('together') &&
+               !prompt.text.toLowerCase().includes('us ');
+      });
+    } else if (category === 'ride-or-die') {
+      // For Ride or Die, include all questions (couples can handle everything)
+      return tierPrompts;
+    }
+    
+    // Default to all prompts if no category
+    return tierPrompts;
+  };
 
-  const currentPrompts = prompts[currentTier];
+  const currentPrompts = getFilteredPrompts(currentTier);
   const currentPrompt = currentPrompts[currentPromptIndex];
+
+  // Calculate statistics
+  const getTotalQuestions = () => {
+    return Object.keys(prompts).reduce((total, tier) => {
+      return total + getFilteredPrompts(tier as 'spark' | 'vibe' | 'lockin').length;
+    }, 0);
+  };
+
+  const totalQuestions = getTotalQuestions();
+  const answeredQuestions = answers.length;
+  const seenQuestions = seenPrompts.size;
+
+  // Redirect to category selection if no category is selected
+  useEffect(() => {
+    if (!category) {
+      window.location.href = '/category-selection';
+    }
+  }, [category]);
 
   // Check if tier should be unlocked
   useEffect(() => {
@@ -55,11 +108,19 @@ export default function GamePage() {
   }, [intimacyLevel, isUnlocked]);
 
   const handleSwipeLeft = () => {
+    // Track seen prompt
+    if (currentPrompt) {
+      setSeenPrompts(prev => new Set(prev).add(currentPrompt.id));
+    }
     // Skip current prompt
     setCurrentPromptIndex(prev => (prev + 1) % currentPrompts.length);
   };
 
   const handleSwipeRight = () => {
+    // Track seen prompt
+    if (currentPrompt) {
+      setSeenPrompts(prev => new Set(prev).add(currentPrompt.id));
+    }
     // Show answer input
     setShowAnswerInput(true);
   };
@@ -117,6 +178,15 @@ export default function GamePage() {
     }
   };
 
+  // Get tier statistics for the tier selector
+  const getTierStats = () => {
+    return {
+      spark: getFilteredPrompts('spark').length,
+      vibe: getFilteredPrompts('vibe').length,
+      lockin: getFilteredPrompts('lockin').length
+    };
+  };
+
   return (
     <div className="min-h-screen bg-theme text-theme-primary flex flex-col">
 
@@ -128,13 +198,26 @@ export default function GamePage() {
           </div>
           <h1 className="font-craftwork-heavy text-xl sm:text-2xl text-willow-green">Willow</h1>
         </Link>
-        <div className="flex items-center gap-3 sm:gap-6">
+        <div className="flex items-center gap-2 sm:gap-4">
           <ThemeToggle />
+          
+          {/* Category Badge */}
+          {category && (
+            <div className="hidden sm:flex items-center gap-2 bg-black bg-opacity-30 px-3 py-2 rounded-full">
+              <span className="font-craftwork text-willow-green text-xs">
+                {category === 'squad' ? 'Squad Vibes' : 'Ride or Die'}
+              </span>
+            </div>
+          )}
+          
+          {/* Question Counters */}
           <div className="flex items-center gap-2 bg-black bg-opacity-30 px-2 sm:px-3 py-1 sm:py-2 rounded-full">
             <span className="font-craftwork text-willow-gray text-xs sm:text-sm">
-              {answers.length} answered
+              {answeredQuestions}/{seenQuestions}/{totalQuestions}
             </span>
           </div>
+          
+          {/* Intimacy Level */}
           <div className="w-8 h-8 sm:w-10 sm:h-10 bg-willow-green rounded-full flex items-center justify-center shadow-lg">
             <span className="text-willow-dark font-bold text-xs sm:text-sm">
               {Math.floor(intimacyLevel / 10)}
@@ -218,6 +301,7 @@ export default function GamePage() {
           currentTier={currentTier}
           isUnlocked={isUnlocked}
           onTierChange={handleTierChange}
+          tierStats={getTierStats()}
         />
       </div>
 
@@ -281,12 +365,16 @@ export default function GamePage() {
               </button>
               
               <h3 className="font-craftwork-heavy text-xl mb-4 text-willow-dark pr-12">
-                How romantic was this?
+                {category === 'squad' 
+                  ? "How good was this vibe?" 
+                  : "How romantic was this?"
+                }
               </h3>
               <StarRating
                 rating={currentRating}
                 onRatingChange={setCurrentRating}
                 onSubmit={handleRatingSubmit}
+                category={category || undefined}
               />
             </motion.div>
           </motion.div>
@@ -333,6 +421,23 @@ export default function GamePage() {
         <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-willow-green opacity-15 rounded-full blur-xl"></div>
       </div>
     </div>
+  );
+}
+
+export default function GamePageWithSuspense() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-theme text-theme-primary flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-willow-green rounded-full flex items-center justify-center shadow-lg mx-auto mb-4">
+            <span className="text-willow-dark font-bold text-lg sm:text-xl">W</span>
+          </div>
+          <p className="font-craftwork text-theme-secondary">Loading your game...</p>
+        </div>
+      </div>
+    }>
+      <GamePage />
+    </Suspense>
   );
 }
 

@@ -4,15 +4,16 @@ export interface Prompt {
   tier: 'spark' | 'vibe' | 'lockin';
   category: string;
   difficulty?: 'easy' | 'medium' | 'hard';
+  categoryType?: 'squad' | 'ride-or-die' | 'both';
 }
 
 export const prompts: Record<string, Prompt[]> = {
   spark: [
     // Secrets & Fun
-    { id: 's1', text: "What's your wildest group chat secret?", tier: 'spark', category: 'Secrets', difficulty: 'easy' },
-    { id: 's2', text: "What's the most embarrassing thing that happened to you this week?", tier: 'spark', category: 'Funny', difficulty: 'easy' },
-    { id: 's3', text: "What's your go-to karaoke song?", tier: 'spark', category: 'Fun', difficulty: 'easy' },
-    { id: 's4', text: "What's the weirdest food combination you actually enjoy?", tier: 'spark', category: 'Quirky', difficulty: 'easy' },
+    { id: 's1', text: "What's your wildest group chat secret?", tier: 'spark', category: 'Secrets', difficulty: 'easy', categoryType: 'squad' },
+    { id: 's2', text: "What's the most embarrassing thing that happened to you this week?", tier: 'spark', category: 'Funny', difficulty: 'easy', categoryType: 'both' },
+    { id: 's3', text: "What's your go-to karaoke song?", tier: 'spark', category: 'Fun', difficulty: 'easy', categoryType: 'both' },
+    { id: 's4', text: "What's the weirdest food combination you actually enjoy?", tier: 'spark', category: 'Quirky', difficulty: 'easy', categoryType: 'both' },
     
     // Dreams & Aspirations
     { id: 's5', text: "If you could have dinner with anyone, who would it be?", tier: 'spark', category: 'Dreams', difficulty: 'easy' },
@@ -61,15 +62,15 @@ export const prompts: Record<string, Prompt[]> = {
 
   vibe: [
     // Connection & Understanding
-    { id: 'v1', text: "What's a small habit of mine that makes you smile?", tier: 'vibe', category: 'Connection', difficulty: 'medium' },
-    { id: 'v2', text: "What's your favorite memory of us together?", tier: 'vibe', category: 'Memories', difficulty: 'medium' },
-    { id: 'v3', text: "What's something you've always wanted to tell me but haven't?", tier: 'vibe', category: 'Deep', difficulty: 'medium' },
-    { id: 'v4', text: "What's your love language and how do you show it?", tier: 'vibe', category: 'Love', difficulty: 'medium' },
+    { id: 'v1', text: "What's a small habit of mine that makes you smile?", tier: 'vibe', category: 'Connection', difficulty: 'medium', categoryType: 'ride-or-die' },
+    { id: 'v2', text: "What's your favorite memory of us together?", tier: 'vibe', category: 'Memories', difficulty: 'medium', categoryType: 'ride-or-die' },
+    { id: 'v3', text: "What's something you've always wanted to tell me but haven't?", tier: 'vibe', category: 'Deep', difficulty: 'medium', categoryType: 'ride-or-die' },
+    { id: 'v4', text: "What's your love language and how do you show it?", tier: 'vibe', category: 'Love', difficulty: 'medium', categoryType: 'ride-or-die' },
     
     // Vulnerability & Trust
-    { id: 'v5', text: "What's a fear you have that I don't know about?", tier: 'vibe', category: 'Vulnerability', difficulty: 'medium' },
-    { id: 'v6', text: "What's the most vulnerable thing you've shared with me?", tier: 'vibe', category: 'Trust', difficulty: 'medium' },
-    { id: 'v7', text: "What's something you're insecure about that I could help with?", tier: 'vibe', category: 'Support', difficulty: 'medium' },
+    { id: 'v5', text: "What's a fear you have that your friends don't know about?", tier: 'vibe', category: 'Vulnerability', difficulty: 'medium', categoryType: 'squad' },
+    { id: 'v6', text: "What's the most vulnerable thing you've shared with me?", tier: 'vibe', category: 'Trust', difficulty: 'medium', categoryType: 'ride-or-die' },
+    { id: 'v7', text: "What's something you're insecure about that your friends could help with?", tier: 'vibe', category: 'Support', difficulty: 'medium', categoryType: 'squad' },
     
     // Communication & Growth
     { id: 'v8', text: "What's a way I could be a better partner to you?", tier: 'vibe', category: 'Growth', difficulty: 'medium' },

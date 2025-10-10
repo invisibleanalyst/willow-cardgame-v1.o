@@ -8,9 +8,10 @@ interface StarRatingProps {
   rating: number;
   onRatingChange: (rating: number) => void;
   onSubmit: (rating: number) => void;
+  category?: 'squad' | 'ride-or-die';
 }
 
-export default function StarRating({ rating, onRatingChange, onSubmit }: StarRatingProps) {
+export default function StarRating({ rating, onRatingChange, onSubmit, category }: StarRatingProps) {
   const [hoveredRating, setHoveredRating] = useState(0);
 
   const handleStarClick = (starRating: number) => {
@@ -24,13 +25,24 @@ export default function StarRating({ rating, onRatingChange, onSubmit }: StarRat
   };
 
   const getRatingText = (rating: number) => {
-    switch (rating) {
-      case 1: return 'Not romantic at all';
-      case 2: return 'A little romantic';
-      case 3: return 'Somewhat romantic';
-      case 4: return 'Very romantic';
-      case 5: return 'Extremely romantic';
-      default: return 'How romantic was this?';
+    if (category === 'squad') {
+      switch (rating) {
+        case 1: return 'Meh, not really';
+        case 2: return 'It was okay';
+        case 3: return 'Pretty good vibes';
+        case 4: return 'Really solid vibes';
+        case 5: return 'Absolute fire vibes';
+        default: return 'How good was this vibe?';
+      }
+    } else {
+      switch (rating) {
+        case 1: return 'Not romantic at all';
+        case 2: return 'A little romantic';
+        case 3: return 'Somewhat romantic';
+        case 4: return 'Very romantic';
+        case 5: return 'Extremely romantic';
+        default: return 'How romantic was this?';
+      }
     }
   };
 
@@ -100,10 +112,16 @@ export default function StarRating({ rating, onRatingChange, onSubmit }: StarRat
         >
           <div className="inline-flex items-center gap-2 bg-willow-green bg-opacity-10 px-4 py-2 rounded-full">
             <span className="text-2xl">
-              {rating >= 4 ? '💖' : rating >= 3 ? '😊' : '🤔'}
+              {category === 'squad' 
+                ? (rating >= 4 ? '🤝' : rating >= 3 ? '😊' : '🤔')
+                : (rating >= 4 ? '💖' : rating >= 3 ? '😊' : '🤔')
+              }
             </span>
             <span className="font-craftwork text-sm text-willow-dark">
-              {rating >= 4 ? 'Amazing!' : rating >= 3 ? 'Nice!' : 'Keep trying!'}
+              {category === 'squad'
+                ? (rating >= 4 ? 'Vibes were immaculate!' : rating >= 3 ? 'Good stuff!' : 'Keep the vibes flowing!')
+                : (rating >= 4 ? 'Amazing!' : rating >= 3 ? 'Nice!' : 'Keep trying!')
+              }
             </span>
           </div>
         </motion.div>

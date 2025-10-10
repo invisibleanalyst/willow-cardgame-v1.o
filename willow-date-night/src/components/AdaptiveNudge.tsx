@@ -88,15 +88,16 @@ export default function AdaptiveNudge({ currentTier, isUnlocked, onResponse }: A
         >
           Skip Nudge
         </button>
-        <motion.button
+        <button
           onClick={() => onResponse(true)}
           className="btn-willow"
-          style={{ backgroundColor: nudge.color }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          style={{ 
+            background: `linear-gradient(135deg, ${nudge.color} 0%, ${nudge.color}dd 100%)`,
+            borderColor: nudge.color 
+          }}
         >
           {nudge.buttonText}
-        </motion.button>
+        </button>
       </motion.div>
 
       {/* Progress indicator */}

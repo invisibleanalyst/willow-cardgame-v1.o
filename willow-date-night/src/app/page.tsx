@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { HeartIcon, SwirlIcon, FlameIcon, ArrowRightIcon, StarIcon, PlayIcon, UsersIcon, CheckIcon, ArrowUpRightIcon, ConnectionIcon, GrowthIcon, SparkIcon, FlowIcon, MessageIcon, BrainIcon, TargetIcon } from '@/components/Icons';
+import { HeartIcon, SwirlIcon, FlameIcon, ArrowRightIcon, StarIcon, PlayIcon, UsersIcon, CheckIcon, ArrowUpRightIcon, ConnectionIcon, GrowthIcon, SparkIcon, FlowIcon, MessageIcon, BrainIcon, TargetIcon, XIcon, InstagramIcon, TikTokIcon } from '@/components/Icons';
 import ThemeToggle from '@/components/ThemeToggle';
 
 export default function Home() {
@@ -90,7 +90,7 @@ export default function Home() {
         </Link>
         <div className="flex items-center gap-3">
           <ThemeToggle />
-          <Link href="/game" className="btn-willow-outline">
+          <Link href="/category-selection" className="btn-willow-outline">
             What's Next? ↗
           </Link>
         </div>
@@ -167,7 +167,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 lg:mb-16"
           >
-            <Link href="/game" className="btn-willow text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 text-lg sm:text-xl font-craftwork-heavy w-full sm:w-auto">
+            <Link href="/category-selection" className="btn-willow text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 text-lg sm:text-xl font-craftwork-heavy w-full sm:w-auto">
               Start Your Journey <ArrowUpRightIcon className="w-4 h-4 sm:w-5 sm:h-5 inline ml-1" />
             </Link>
             <button className="btn-willow-outline text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
@@ -528,7 +528,7 @@ export default function Home() {
                   Start your journey with Willow today and discover what meaningful connection feels like.
                 </p>
                 <Link 
-                  href="/game" 
+                  href="/category-selection" 
                   className="group inline-flex items-center gap-3 bg-willow-bright text-willow-dark px-8 py-4 rounded-2xl font-craftwork-heavy text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden"
                 >
                   {/* Subtle glow effect */}
@@ -612,7 +612,7 @@ export default function Home() {
                   <span className="font-craftwork text-sm">AI sentiment analysis</span>
                 </li>
               </ul>
-              <Link href="/game" className="w-full btn-willow-outline text-center block">
+              <Link href="/category-selection" className="w-full btn-willow-outline text-center block">
                 Start Free
               </Link>
             </motion.div>
@@ -660,7 +660,7 @@ export default function Home() {
                   <span className="font-craftwork text-sm">AI adaptive nudging</span>
                 </li>
               </ul>
-              <button className="w-full btn-willow text-center block">
+              <button className="w-full bg-white text-willow-dark border-2 border-white hover:bg-gray-100 hover:scale-105 transition-all duration-300 py-4 px-6 rounded-xl font-craftwork-heavy text-center block shadow-lg hover:shadow-xl">
                 Get Romantic Escape
               </button>
             </motion.div>
@@ -708,7 +708,7 @@ export default function Home() {
                   <span className="font-craftwork text-sm">Founder badge & recognition</span>
                 </li>
               </ul>
-              <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-lg font-craftwork-heavy hover:from-purple-600 hover:to-pink-600 transition-all duration-200">
+              <button className="w-full bg-white text-purple-600 border-2 border-white hover:bg-gray-100 hover:scale-105 transition-all duration-300 py-4 px-6 rounded-xl font-craftwork-heavy shadow-lg hover:shadow-xl">
                 Get Premium
               </button>
             </motion.div>
@@ -788,23 +788,28 @@ export default function Home() {
             
             <div>
               <h5 className="font-craftwork-heavy text-lg mb-4">Contacts</h5>
-              <ul className="space-y-2">
-                <li><a href="mailto:thukuduanel@gmail.com" className="font-craftwork text-willow-gray hover:text-willow-green">thukuduanel@gmail.com</a></li>
-                <li><a href="tel:0706450811" className="font-craftwork text-willow-gray hover:text-willow-green">0706450811</a></li>
+              <ul className="space-y-2 mb-4">
+                <li><a href="mailto:thukuduane@gmail.com" className="font-craftwork text-willow-gray hover:text-willow-green">thukuduane@gmail.com</a></li>
+                <li><a href="tel:0796460911" className="font-craftwork text-willow-gray hover:text-willow-green">0796460911</a></li>
               </ul>
+               <div className="flex gap-3">
+                 <a href="#" className="text-willow-gray hover:text-willow-green transition-colors duration-200">
+                   <XIcon className="w-5 h-5" />
+                 </a>
+                 <a href="#" className="text-willow-gray hover:text-willow-green transition-colors duration-200">
+                   <InstagramIcon className="w-5 h-5" />
+                 </a>
+                 <a href="#" className="text-willow-gray hover:text-willow-green transition-colors duration-200">
+                   <TikTokIcon className="w-5 h-5" />
+                 </a>
+               </div>
             </div>
           </div>
           
-          <div className="mt-8 pt-8 border-t border-willow-gray border-opacity-20 flex justify-between items-center">
-            <p className="font-craftwork text-willow-gray text-sm">
-              2023, Willow
+          <div className="mt-8 pt-8 border-t border-willow-gray border-opacity-20">
+            <p className="font-craftwork text-willow-gray text-sm text-center">
+              2025, Willow
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="text-willow-gray hover:text-willow-green">Facebook</a>
-              <a href="#" className="text-willow-gray hover:text-willow-green">YouTube</a>
-              <a href="#" className="text-willow-gray hover:text-willow-green">Twitter</a>
-              <a href="#" className="text-willow-gray hover:text-willow-green">LinkedIn</a>
-            </div>
           </div>
         </div>
       </footer>

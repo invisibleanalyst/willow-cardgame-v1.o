@@ -24,7 +24,7 @@ export default function IntimacyMeter({ level, isPulsing }: IntimacyMeterProps) 
   };
 
   return (
-    <div className="flex flex-col items-center gap-4 pt-8 lg:pt-12">
+    <div className="flex flex-col items-center gap-4 pt-4 sm:pt-8 lg:pt-12">
       {/* Meter */}
       <div className="relative">
         <div className="intimacy-meter border-2 border-theme">
@@ -41,7 +41,7 @@ export default function IntimacyMeter({ level, isPulsing }: IntimacyMeterProps) 
         </div>
         
         {/* Level indicator */}
-        <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
+        <div className="absolute -top-6 sm:-top-8 left-1/2 transform -translate-x-1/2">
           <div className="bg-willow-dark text-white px-2 py-1 rounded-full text-xs font-craftwork-heavy border border-white border-opacity-20 shadow-lg">
             {level}%
           </div>
@@ -50,10 +50,10 @@ export default function IntimacyMeter({ level, isPulsing }: IntimacyMeterProps) 
 
       {/* Level label */}
       <div className="text-center">
-        <h4 className="font-craftwork-heavy text-lg lg:text-xl text-theme-primary mb-2">
+        <h4 className="font-craftwork-heavy text-base sm:text-lg lg:text-xl text-theme-primary mb-2">
           {getLevelLabel(level)}
         </h4>
-        <p className="font-craftwork text-xs lg:text-sm text-theme-secondary max-w-[160px] lg:max-w-[180px] leading-relaxed">
+        <p className="font-craftwork text-xs sm:text-sm text-theme-secondary max-w-[140px] sm:max-w-[160px] lg:max-w-[180px] leading-relaxed">
           {level < 50 && "Keep going to unlock Vibe Check!"}
           {level >= 50 && level < 75 && "Vibe Check unlocked! Keep going for Lock-In Level!"}
           {level >= 75 && "All tiers unlocked! You're locked in! 💎"}
@@ -90,7 +90,7 @@ export default function IntimacyMeter({ level, isPulsing }: IntimacyMeterProps) 
             ease: "easeInOut"
           }}
         >
-          <HeartIcon className="w-8 h-8 lg:w-12 lg:h-12 text-willow-green" />
+          <HeartIcon className="w-6 h-6 sm:w-8 sm:h-8 lg:w-12 lg:h-12 text-willow-green" />
         </motion.div>
       )}
     </div>
