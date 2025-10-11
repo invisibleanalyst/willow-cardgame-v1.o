@@ -10,7 +10,7 @@ interface AnswerInputProps {
   setIsRecording: (recording: boolean) => void;
 }
 
-export default function AnswerInput({ onSubmit, isRecording, setIsRecording }: AnswerInputProps) {
+export default function AnswerInputImproved({ onSubmit, isRecording, setIsRecording }: AnswerInputProps) {
   const [answer, setAnswer] = useState('');
   const [recognition, setRecognition] = useState<any>(null);
   const [speechSupported, setSpeechSupported] = useState(false);
@@ -30,7 +30,7 @@ export default function AnswerInput({ onSubmit, isRecording, setIsRecording }: A
     }
 
     // Check for speech recognition support
-    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     
     if (!SpeechRecognition) {
       setErrorMessage('Speech recognition not supported in this browser');
@@ -147,6 +147,26 @@ export default function AnswerInput({ onSubmit, isRecording, setIsRecording }: A
     }
   };
 
+  const getMicrophoneButtonState = () => {
+    if (!speechSupported) return 'disabled';
+    if (microphonePermission === 'denied') return 'denied';
+    if (isRecording) return 'recording';
+    return 'ready';
+  };
+
+  const getMicrophoneButtonText = () => {
+    switch (getMicrophoneButtonState()) {
+      case 'disabled':
+        return 'Not Supported';
+      case 'denied':
+        return 'Permission Denied';
+      case 'recording':
+        return 'Listening...';
+      default:
+        return 'Voice Input';
+    }
+  };
+
   return (
     <form onSubmit={handleSubmit} className="w-full">
       <div className="mb-6">
@@ -162,19 +182,16 @@ export default function AnswerInput({ onSubmit, isRecording, setIsRecording }: A
       </div>
 
       <div className="flex items-center justify-between">
-        {/* Voice input button */}
+        {/* Voice input button with improved states */}
         <button
           type="button"
           onClick={handleVoiceInput}
           className={`voice-button ${isRecording ? 'recording' : ''} ${
-            !speechSupported || microphonePermission === 'denied' ? 'disabled' : ''
+            getMicrophoneButtonState() === 'disabled' || getMicrophoneButtonState() === 'denied' 
+              ? 'disabled' : ''
           }`}
           disabled={!speechSupported || microphonePermission === 'denied'}
-          title={
-            !speechSupported ? 'Not Supported' :
-            microphonePermission === 'denied' ? 'Permission Denied' :
-            isRecording ? 'Listening...' : 'Voice Input'
-          }
+          title={getMicrophoneButtonText()}
         >
           {isRecording ? (
             <motion.div
@@ -249,4 +266,3 @@ export default function AnswerInput({ onSubmit, isRecording, setIsRecording }: A
     </form>
   );
 }
-
