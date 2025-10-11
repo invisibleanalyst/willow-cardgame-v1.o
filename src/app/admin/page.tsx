@@ -120,7 +120,7 @@ export default function AdminPage() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {categories.map(category => {
-              const categoryPrompts = promptManager.getPromptsByCategory(selectedTier, category);
+              const categoryPrompts = getPromptsByCategoryAndTier(category as 'squad' | 'ride-or-die', selectedTier);
               return (
                 <div key={category} className="bg-white bg-opacity-10 p-4 rounded-lg">
                   <h3 className="font-craftwork-heavy text-lg text-willow-green">{category}</h3>
