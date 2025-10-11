@@ -12,6 +12,7 @@ import TierSelector from '@/components/TierSelector';
 import AnswerInput from '@/components/AnswerInput';
 import StarRating from '@/components/StarRating';
 import AdaptiveNudge from '@/components/AdaptiveNudge';
+import GameCompletionScreen from '@/components/GameCompletionScreen';
 import { prompts, getRandomPrompts, type Prompt } from '@/data/prompts';
 
 // Prompt interface is now imported from @/data/prompts
@@ -35,6 +36,7 @@ function GamePage() {
   const [showAnswerInput, setShowAnswerInput] = useState(false);
   const [showRating, setShowRating] = useState(false);
   const [showNudge, setShowNudge] = useState(false);
+  const [showCompletionScreen, setShowCompletionScreen] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
   const [currentAnswer, setCurrentAnswer] = useState('');
   const [currentRating, setCurrentRating] = useState(0);
@@ -144,17 +146,28 @@ function GamePage() {
     setCurrentRating(rating);
     setShowRating(false);
 
-    // Check for adaptive nudge
-    if (currentAnswer.length < 20 || rating < 3) {
-      setTimeout(() => setShowNudge(true), 1000);
-    }
+    // Check if session should end (after 10 answers or reaching max intimacy)
+    const newAnswers = [...answers, newAnswer];
+    const shouldEndSession = newAnswers.length >= 10 || intimacyLevel >= 90;
 
-    // Move to next prompt
-    setTimeout(() => {
-      setCurrentPromptIndex(prev => (prev + 1) % currentPrompts.length);
-      setCurrentAnswer('');
-      setCurrentRating(0);
-    }, 2000);
+    if (shouldEndSession) {
+      // Show completion screen after a short delay
+      setTimeout(() => {
+        setShowCompletionScreen(true);
+      }, 2000);
+    } else {
+      // Check for adaptive nudge
+      if (currentAnswer.length < 20 || rating < 3) {
+        setTimeout(() => setShowNudge(true), 1000);
+      }
+
+      // Move to next prompt
+      setTimeout(() => {
+        setCurrentPromptIndex(prev => (prev + 1) % currentPrompts.length);
+        setCurrentAnswer('');
+        setCurrentRating(0);
+      }, 2000);
+    }
   };
 
   const handleNudgeResponse = (accepted: boolean) => {
@@ -169,6 +182,16 @@ function GamePage() {
         setCurrentPromptIndex(0);
       }
     }
+  };
+
+  const handleCompletionScreenClose = () => {
+    setShowCompletionScreen(false);
+  };
+
+  const handleCompletionScreenContinue = () => {
+    setShowCompletionScreen(false);
+    // Redirect to feedback form or home page
+    window.location.href = '/';
   };
 
   const handleTierChange = (tier: 'spark' | 'vibe' | 'lockin') => {
@@ -411,6 +434,19 @@ function GamePage() {
               />
             </motion.div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Game Completion Screen */}
+      <AnimatePresence>
+        {showCompletionScreen && (
+          <GameCompletionScreen
+            answers={answers}
+            prompts={prompts}
+            category={category || 'squad'}
+            onClose={handleCompletionScreenClose}
+            onContinue={handleCompletionScreenContinue}
+          />
         )}
       </AnimatePresence>
 

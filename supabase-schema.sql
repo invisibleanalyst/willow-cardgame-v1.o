@@ -24,7 +24,18 @@ CREATE TABLE IF NOT EXISTS premium_experience (
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
--- Premium Prompts Table (for storing tier-specific prompts)
+-- Prompts Table (for storing all prompts - free and premium)
+CREATE TABLE IF NOT EXISTS prompts (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  prompt_text TEXT NOT NULL,
+  tier TEXT NOT NULL CHECK (tier IN ('spark', 'vibe', 'lockin')),
+  category TEXT NOT NULL CHECK (category IN ('squad', 'ride-or-die', 'both')),
+  difficulty TEXT DEFAULT 'medium' CHECK (difficulty IN ('easy', 'medium', 'hard')),
+  is_premium_only BOOLEAN DEFAULT false,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Premium Prompts Table (for storing tier-specific prompts) - Legacy table
 CREATE TABLE IF NOT EXISTS premium_prompts (
   id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   prompt_text TEXT NOT NULL,
@@ -51,6 +62,9 @@ CREATE INDEX IF NOT EXISTS idx_user_packs_user_id ON user_packs(user_id);
 CREATE INDEX IF NOT EXISTS idx_user_packs_status ON user_packs(status);
 CREATE INDEX IF NOT EXISTS idx_premium_experience_email ON premium_experience(email);
 CREATE INDEX IF NOT EXISTS idx_premium_experience_status ON premium_experience(status);
+CREATE INDEX IF NOT EXISTS idx_prompts_tier ON prompts(tier);
+CREATE INDEX IF NOT EXISTS idx_prompts_category ON prompts(category);
+CREATE INDEX IF NOT EXISTS idx_prompts_premium ON prompts(is_premium_only);
 CREATE INDEX IF NOT EXISTS idx_premium_prompts_tier ON premium_prompts(tier);
 CREATE INDEX IF NOT EXISTS idx_premium_prompts_category ON premium_prompts(category);
 CREATE INDEX IF NOT EXISTS idx_user_answers_user_id ON user_answers(user_id);
@@ -58,6 +72,7 @@ CREATE INDEX IF NOT EXISTS idx_user_answers_user_id ON user_answers(user_id);
 -- Enable Row Level Security (RLS)
 ALTER TABLE user_packs ENABLE ROW LEVEL SECURITY;
 ALTER TABLE premium_experience ENABLE ROW LEVEL SECURITY;
+ALTER TABLE prompts ENABLE ROW LEVEL SECURITY;
 ALTER TABLE premium_prompts ENABLE ROW LEVEL SECURITY;
 ALTER TABLE user_answers ENABLE ROW LEVEL SECURITY;
 
@@ -69,6 +84,9 @@ CREATE POLICY "Allow all operations on user_packs" ON user_packs FOR ALL USING (
 
 -- Premium experience policies
 CREATE POLICY "Allow all operations on premium_experience" ON premium_experience FOR ALL USING (true);
+
+-- Prompts policies
+CREATE POLICY "Allow read access to prompts" ON prompts FOR SELECT USING (true);
 
 -- Premium prompts policies
 CREATE POLICY "Allow read access to premium_prompts" ON premium_prompts FOR SELECT USING (true);

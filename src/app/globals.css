@@ -60,6 +60,7 @@ body {
   color: #FFFFFF;
 }
 
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -368,6 +369,7 @@ button, [role="button"] {
   color: var(--text-primary);
 }
 
+
 /* Premium Button Styles */
 .btn-willow {
   background: linear-gradient(135deg, var(--willow-neon-green) 0%, #00E096 100%);
@@ -586,6 +588,7 @@ button, [role="button"] {
   position: absolute;
   bottom: 0;
 }
+
 
 .intimacy-fill.pulse {
   animation: pulse-heart 1s ease-in-out infinite;
