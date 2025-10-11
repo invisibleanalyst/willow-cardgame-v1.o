@@ -1,20 +1,21 @@
 'use client';
 
 import { useState } from 'react';
-import { promptManager } from '@/data/promptManager';
-import { getPromptStats } from '@/data/prompts';
+import { getPromptStats, getAllPromptsForCategory, getPromptsByCategoryAndTier } from '@/data/prompts';
 
 export default function AdminPage() {
   const [selectedTier, setSelectedTier] = useState<'spark' | 'vibe' | 'lockin'>('spark');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   
   const stats = getPromptStats();
-  const allPrompts = promptManager.getAllPrompts();
-  const categories = promptManager.getCategoriesForTier(selectedTier);
+  const categories = ['squad', 'ride-or-die'];
   
   const filteredPrompts = selectedCategory === 'all' 
-    ? allPrompts[selectedTier]
-    : promptManager.getPromptsByCategory(selectedTier, selectedCategory);
+    ? [
+        ...getPromptsByCategoryAndTier('squad', selectedTier),
+        ...getPromptsByCategoryAndTier('ride-or-die', selectedTier)
+      ]
+    : getPromptsByCategoryAndTier(selectedCategory as 'squad' | 'ride-or-die', selectedTier);
 
   return (
     <div className="min-h-screen bg-willow-dark text-white p-8">
@@ -33,15 +34,15 @@ export default function AdminPage() {
         <div className="grid grid-cols-4 gap-4 mb-8">
           <div className="bg-white bg-opacity-10 p-4 rounded-lg">
             <h3 className="font-craftwork-heavy text-lg text-willow-green">Spark Stage</h3>
-            <p className="font-craftwork text-2xl">{stats.spark} prompts</p>
+            <p className="font-craftwork text-2xl">{stats.squad.spark + stats['ride-or-die'].spark} prompts</p>
           </div>
           <div className="bg-white bg-opacity-10 p-4 rounded-lg">
             <h3 className="font-craftwork-heavy text-lg text-willow-green">Vibe Check</h3>
-            <p className="font-craftwork text-2xl">{stats.vibe} prompts</p>
+            <p className="font-craftwork text-2xl">{stats.squad.vibe + stats['ride-or-die'].vibe} prompts</p>
           </div>
           <div className="bg-white bg-opacity-10 p-4 rounded-lg">
             <h3 className="font-craftwork-heavy text-lg text-willow-green">Lock-In Level</h3>
-            <p className="font-craftwork text-2xl">{stats.lockin} prompts</p>
+            <p className="font-craftwork text-2xl">{stats.squad.lockin + stats['ride-or-die'].lockin} prompts</p>
           </div>
           <div className="bg-willow-green bg-opacity-20 p-4 rounded-lg">
             <h3 className="font-craftwork-heavy text-lg text-willow-green">Total</h3>
