@@ -23,18 +23,18 @@ export default function PaymentModal({ isOpen, onClose, packType, onSuccess }: P
 
   const packDetails = {
     'romantic-escape': {
-      name: 'Squad Vibes Premium Pack',
+      name: 'Romantic Escape Pack',
       price: 650,
       currency: 'KES',
       features: [
-        '650+ additional premium prompts',
-        'All 3 tiers unlocked (335+ prompts)',
-        'AI adaptive nudging (3x frequency)',
-        'Context-aware suggestions',
-        'Sentiment-based recommendations',
-        'Opt-out personalized nudges',
+        'All 3 tiers unlocked (75 prompts per category)',
+        'Full Vibe Check & Lock-In Level access',
         'Advanced intimacy tracking',
-        'Unlimited sessions'
+        'Premium adaptive nudging',
+        'Voice & text input features',
+        'Answer review & progress tracking',
+        'Unlimited sessions',
+        'Both Squad & Ride or Die categories'
       ]
     },
     'premium': {
@@ -44,8 +44,8 @@ export default function PaymentModal({ isOpen, onClose, packType, onSuccess }: P
       features: [
         'Everything in Romantic Escape',
         'Exclusive premium prompts',
-        'AI voice responses',
-        'Advanced relationship analytics',
+        'Advanced voice features',
+        'Relationship insights & analytics',
         'Priority support',
         'Founder badge & recognition',
         'Early access to new features'
@@ -57,8 +57,8 @@ export default function PaymentModal({ isOpen, onClose, packType, onSuccess }: P
       currency: 'KES',
       features: [
         'Early access to all features',
-        'All tier unlocks',
-        'Premium prompts',
+        'All tier unlocks (150+ prompts)',
+        'Premium voice features',
         'Advanced analytics',
         'Priority support',
         'Exclusive beta content',

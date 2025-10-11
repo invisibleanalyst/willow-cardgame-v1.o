@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { UsersIcon, HeartIcon, ArrowRightIcon, SparkIcon, ConnectionIcon } from '@/components/Icons';
+import { UsersIcon, HeartIcon, ArrowRightIcon, SparkIcon, ConnectionIcon, MessageIcon, MicrophoneIcon } from '@/components/Icons';
 import ThemeToggle from '@/components/ThemeToggle';
 
 export default function CategorySelectionPage() {
@@ -45,9 +45,9 @@ export default function CategorySelectionPage() {
             className="text-center mb-12 lg:mb-16"
           >
             <h1 className="font-craftwork-heavy text-4xl md:text-6xl lg:text-7xl mb-6 text-high-contrast">
-              Choose Your{' '}
+              Pick Your{' '}
               <span className="text-willow-green-contrast relative">
-                Vibe
+                Adventure
                 <motion.div
                   className="absolute -bottom-2 left-0 right-0 h-1 bg-willow-green opacity-30"
                   initial={{ scaleX: 0 }}
@@ -57,8 +57,9 @@ export default function CategorySelectionPage() {
               </span>
             </h1>
             <p className="font-craftwork text-xl md:text-2xl text-theme-secondary max-w-3xl mx-auto leading-relaxed">
-              Pick the experience that matches your relationship and get ready to{' '}
-              <span className="text-accent-high-contrast font-medium">deepen your connection</span>
+              Two completely different experiences.{' '}
+              <span className="text-accent-high-contrast font-medium">Same incredible results.</span>{' '}
+              Choose your path and prepare for conversations that will blow your mind.
             </p>
           </motion.div>
 
@@ -91,25 +92,30 @@ export default function CategorySelectionPage() {
                   <h2 className="font-craftwork-heavy text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4 text-high-contrast text-center">
                     Squad Vibes
                   </h2>
+                  <div className="text-center mb-3">
+                    <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-craftwork-medium">
+                      FRIENDS EDITION
+                    </span>
+                  </div>
                   
                   {/* Subtitle */}
                   <p className="font-craftwork text-base sm:text-lg text-theme-secondary mb-4 sm:mb-6 text-center leading-relaxed">
-                    For friends who want to know each other even better
+                    For friends who want to laugh harder and connect deeper
                   </p>
 
                   {/* Description */}
                   <div className="space-y-4 mb-8">
                     <div className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                      <span className="font-craftwork text-theme-primary">Light, fun icebreakers</span>
+                      <span className="font-craftwork text-theme-primary">25 Spark prompts (light & fun)</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                      <span className="font-craftwork text-theme-primary">Deep friendship questions</span>
+                      <span className="font-craftwork text-theme-primary">25 Vibe prompts (deeper connection)</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                      <span className="font-craftwork text-theme-primary">Perfect for groups & hangouts</span>
+                      <span className="font-craftwork text-theme-primary">25 Lock-in prompts (ultimate bonding)</span>
                     </div>
                   </div>
 
@@ -158,25 +164,30 @@ export default function CategorySelectionPage() {
                   <h2 className="font-craftwork-heavy text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4 text-high-contrast text-center">
                     Ride or Die
                   </h2>
+                  <div className="text-center mb-3">
+                    <span className="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-craftwork-medium">
+                      COUPLES EDITION
+                    </span>
+                  </div>
                   
                   {/* Subtitle */}
                   <p className="font-craftwork text-base sm:text-lg text-theme-secondary mb-4 sm:mb-6 text-center leading-relaxed">
-                    For couples ready to go deeper than ever before
+                    For couples ready to explore love's deepest mysteries
                   </p>
 
                   {/* Description */}
                   <div className="space-y-4 mb-8">
                     <div className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                      <span className="font-craftwork text-theme-primary">Intimate relationship questions</span>
+                      <span className="font-craftwork text-theme-primary">25 Spark prompts (romantic discovery)</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                      <span className="font-craftwork text-theme-primary">Reveal hidden depths</span>
+                      <span className="font-craftwork text-theme-primary">25 Vibe prompts (intimate connection)</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                      <span className="font-craftwork text-theme-primary">Perfect for committed couples</span>
+                      <span className="font-craftwork text-theme-primary">25 Lock-in prompts (soul-deep bonding)</span>
                     </div>
                   </div>
 
@@ -208,16 +219,16 @@ export default function CategorySelectionPage() {
           >
             <div className="flex flex-wrap justify-center gap-6 mb-6">
               <div className="flex items-center gap-2 bg-theme bg-opacity-40 backdrop-blur-md border border-theme px-4 py-2 rounded-full">
-                <SparkIcon className="w-5 h-5 text-willow-green" />
-                <span className="font-craftwork text-sm text-theme-primary">335+ Questions</span>
+                <MessageIcon className="w-5 h-5 text-willow-green" />
+                <span className="font-craftwork text-sm text-theme-primary">150+ Total Questions</span>
               </div>
               <div className="flex items-center gap-2 bg-theme bg-opacity-40 backdrop-blur-md border border-theme px-4 py-2 rounded-full">
-                <ConnectionIcon className="w-5 h-5 text-willow-green" />
-                <span className="font-craftwork text-sm text-theme-primary">AI-Powered</span>
+                <MicrophoneIcon className="w-5 h-5 text-willow-green" />
+                <span className="font-craftwork text-sm text-theme-primary">Voice & Text Input</span>
               </div>
             </div>
             <p className="font-craftwork text-theme-secondary text-sm">
-              Both experiences feature progressive intimacy levels that unlock as you connect deeper
+              Both experiences unlock deeper levels as you progress - but the journey is completely different
             </p>
           </motion.div>
         </div>
