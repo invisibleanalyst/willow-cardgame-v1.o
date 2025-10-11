@@ -661,7 +661,7 @@ export default function Home() {
                 {/* Animated background */}
                 <div className="absolute inset-0 bg-gradient-to-r from-willow-green to-emerald-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                 
-                <span className="relative z-10">🚀 Let's Get All 150 Prompts</span>
+                <span className="relative z-10">Let's Get All 150 Prompts</span>
                 <motion.div
                   animate={{ x: [0, 3, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
