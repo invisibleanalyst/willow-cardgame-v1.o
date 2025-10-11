@@ -1,0 +1,3397 @@
+[
+  {
+    "text": "What's the most unexpected thing you did at a hangout that surprised everyone?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you thought was normal until you realized no one else does it?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's the weirdest thing you've ever googled at 3 AM?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a habit you have that you're pretty sure is unique to you?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's the most random thing you've ever impulse-bought?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you do when you're alone that would be weird if people saw?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's the strangest compliment you've ever received?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a food combination you love that others find disgusting?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's the most embarrassing autocorrect fail you've ever sent?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you're secretly really good at that no one knows about?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's the weirdest dream you've had that you still remember?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a childhood fear you had that makes no sense now?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's the most ridiculous thing you've ever cried about?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you used to believe as a kid that was completely wrong?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's the most awkward social situation you've ever been in?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a skill you wish you had but have never tried to learn?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's the weirdest thing you've ever found in your room?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you do differently than everyone else you know?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's the most random fact you know that serves no purpose?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a weird talent you have that you're oddly proud of?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's the strangest way you've ever met someone?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you've always wanted to try but never had the courage?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's the most embarrassing thing you've ever done for attention?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a weird superstition you have that you know is silly?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's the most unexpected way you've ever made someone laugh?",
+    "category": "squad",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you're working on improving about yourself right now?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a goal you have that you haven't told many people about?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've learned about yourself recently?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a challenge you're facing that you could use support with?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you're proud of that you don't usually talk about?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a belief or value that's really important to you?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've changed your mind about recently?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way you've grown or changed in the past year?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you're curious about that you've never explored?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a fear you have that you're working to overcome?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've discovered about yourself through friendship?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way you've helped someone that made you feel good?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you're grateful for that you don't usually mention?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a lesson you've learned from a difficult experience?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you wish you could tell your younger self?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way you've surprised yourself recently?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you're looking forward to that excites you?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a quality you admire in others that you're trying to develop?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've realized about what makes you happy?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way you've become more confident recently?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've learned about friendship that changed your perspective?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a challenge you've overcome that made you stronger?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you're working on that requires patience?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way you've become more understanding of others?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've discovered about yourself that surprised you?",
+    "category": "squad",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's the most important thing you've learned about friendship?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you've never told anyone that you think people would understand?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's your biggest fear about losing important relationships?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's the most meaningful way someone has supported you?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you want to change about how you connect with others?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's your vision for your relationships in 10 years?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you'd never want to lose about your closest friendships?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's the hardest thing you've had to forgive someone for?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "If you could relive one memory but change one thing, what would it be?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's the most vulnerable thing you've never told anyone?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way you've helped someone through their darkest time?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you've learned about yourself through deep friendship?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way you've changed because of meaningful relationships?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you're grateful for about your friendships that you don't usually say?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a challenge you've overcome together that made you stronger?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's your favorite thing about how you handle disagreements with friends?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you've learned about yourself through supporting others?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way you've helped someone through a tough time?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you're grateful for about your friendships that you don't usually say?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a challenge you've overcome together that made you stronger?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's your favorite thing about how you handle disagreements with friends?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you've learned about yourself through supporting others?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way you've helped someone through a tough time?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you're grateful for about your friendships that you don't usually say?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a challenge you've overcome together that made you stronger?",
+    "category": "squad",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about yourself that you think I don't know yet?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a childhood memory that shaped who you are today?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you're secretly really good at that might surprise me?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a fear or insecurity you have that you haven't shared with me?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you've always wanted to try but never had the courage to do?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a belief or value that's really important to you that I might not know about?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you're proud of that you've never told me about?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a way you've changed or grown recently that you want me to notice?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you're curious about me that you've never asked?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a dream or goal you have that you haven't shared with me yet?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you wish you could tell your past self about relationships?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a way you show love or care that you think I might not notice?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you're working on improving about yourself right now?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a quality you admire in others that you wish you had more of?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you're grateful for that you don't usually talk about?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a quirky habit of mine you secretly love?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something about me that surprised you when we first met?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a small thing I do that makes you smile?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you've learned about yourself since we've been together?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a memory of us that you think about often?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you're curious about my past that you've never asked?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a way I make you feel most loved?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something you've always wanted to tell me but haven't found the right moment?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a dream you have for us that you haven't shared yet?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's something about our relationship that makes you feel most secure?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's a small habit of mine that makes you smile?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's your favorite memory of us together?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've always wanted to tell me but haven't?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's your love language and how do you show it?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's the most vulnerable thing you've shared with me?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something about me that surprised you when we first met?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way I make you feel most loved?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've learned about yourself through our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "If we could swap one daily routine, what would you want to try from my life?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a challenge we've overcome together that made us stronger?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's your favorite thing about how we handle disagreements?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've learned about yourself through our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way I've helped you heal from past wounds?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something about our relationship that scares you?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's the most important thing you've learned about love from being with me?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way you've changed because of our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you're grateful for about our relationship that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a challenge we've overcome together that made us stronger?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's your favorite thing about how we handle disagreements?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've learned about yourself through our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way I've helped you heal from past wounds?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something about our relationship that scares you?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's the most important thing you've learned about love from being with me?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way you've changed because of our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you're grateful for about our relationship that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "free",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's our biggest shared dream?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's the most vulnerable thing you've ever shared with me?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you want to change about our relationship?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's your deepest fear about our future together?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's the most important lesson you've learned from our relationship?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's your vision for our life together in 10 years?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you'd never want to lose about our connection?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's the hardest thing you've had to forgive me for?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a dream we've never shared that could change our future together?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's the most difficult conversation we've ever had and what did it teach us?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way I've helped you heal from past wounds?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's your deepest insecurity and how can I help you overcome it?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our relationship that scares you?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's the most important thing you've learned about love from being with me?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way you've changed because of our relationship?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you're grateful for about our relationship that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a challenge we've overcome together that made us stronger?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's your favorite thing about how we handle disagreements?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you've learned about yourself through our relationship?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way I've helped you heal from past wounds?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our relationship that scares you?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's the most important thing you've learned about love from being with me?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way you've changed because of our relationship?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you're grateful for about our relationship that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a challenge we've overcome together that made us stronger?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "free",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's the moment you knew you wanted to spend the rest of your life with me?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "If you could change one thing about how we handle conflict, what would it be?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's the biggest fear you have about our future together?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "If we had to describe our love in three words, what would yours be?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What's the deepest truth about yourself that you've never shared with anyone?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about a quirky habit of mine you secretly love?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about something about me that surprised you when we first met?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about a small thing I do that makes you smile?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about something you've learned about yourself since we've been together?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about a memory of us that you think about often?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about something you're curious about my past that you've never asked?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about a way I make you feel most loved?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about something you've always wanted to tell me but haven't found the right moment?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about a dream you have for us that you haven't shared yet?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about something about our relationship that makes you feel most secure?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about a way you show love or care that you think I might not notice?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about something you're working on improving about yourself right now?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about a quality you admire in others that you wish you had more of?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about something you're grateful for that you don't usually talk about?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about a childhood memory that shaped who you are today?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about something you're secretly really good at that might surprise me?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about a fear or insecurity you have that you haven't shared with me?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about something you've always wanted to try but never had the courage to do?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about a belief or value that's really important to you that I might not know about?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about something you're proud of that you've never told me about?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about the moment you knew you wanted to spend the rest of your life with me?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "If we could change one thing about how we handle conflict, what would it be?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about the biggest fear you have about our future together?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "If we had to describe our love in three words, what would wers be?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about the deepest truth about yourself that you've never shared with anyone?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe a quirky habit of mine you secretly love?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe something about me that surprised you when we first met?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe a small thing I do that makes you smile?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe something you've learned about yourself since we've been together?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe a memory of us that you think about often?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe something you're curious about my past that you've never asked?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe a way I make you feel most loved?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe something you've always wanted to tell me but haven't found the right moment?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe a dream you have for us that you haven't shared yet?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe something about our relationship that makes you feel most secure?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe a way you show love or care that you think I might not notice?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe something you're working on improving about yourself right now?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe a quality you admire in others that you wish you had more of?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe something you're grateful for that you don't usually talk about?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe a childhood memory that shaped who you are today?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe something you're secretly really good at that might surprise me?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe a fear or insecurity you have that you haven't shared with me?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe something you've always wanted to try but never had the courage to do?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe a belief or value that's really important to you that I might not know about?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe something you're proud of that you've never told me about?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe the moment you knew you wanted to spend the rest of your life with me?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "If you could change one thing about how we handle conflict, what would it be? and why does it matter to you?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe the biggest fear you have about our future together?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "If we had to describe our love in three words, what would yours be? and why does it matter to you?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Describe the deepest truth about yourself that you've never shared with anyone?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share a quirky habit of mine you secretly love?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share something about me that surprised you when we first met?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share a small thing I do that makes you smile?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share something you've learned about yourself since we've been together?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share a memory of us that you think about often?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share something you're curious about my past that you've never asked?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share a way I make you feel most loved?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share something you've always wanted to tell me but haven't found the right moment?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share a dream you have for us that you haven't shared yet?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share something about our relationship that makes you feel most secure?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share a way you show love or care that you think I might not notice?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share something you're working on improving about yourself right now?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share a quality you admire in others that you wish you had more of?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share something you're grateful for that you don't usually talk about?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share a childhood memory that shaped who you are today?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share something you're secretly really good at that might surprise me?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share a fear or insecurity you have that you haven't shared with me?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share something you've always wanted to try but never had the courage to do?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share a belief or value that's really important to you that I might not know about?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share something you're proud of that you've never told me about?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share the moment you knew you wanted to spend the rest of your life with me?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "If you could change one thing about how we handle conflict, what would it be? and what makes it special?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share the biggest fear you have about our future together?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "If we had to describe our love in three words, what would yours be? and what makes it special?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Share the deepest truth about yourself that you've never shared with anyone?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain a quirky habit of mine you secretly love?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain something about me that surprised you when we first met?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain a small thing I do that makes you smile?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain something you've learned about yourself since we've been together?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain a memory of us that you think about often?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain something you're curious about my past that you've never asked?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain a way I make you feel most loved?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain something you've always wanted to tell me but haven't found the right moment?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain a dream you have for us that you haven't shared yet?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain something about our relationship that makes you feel most secure?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain a way you show love or care that you think I might not notice?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain something you're working on improving about yourself right now?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain a quality you admire in others that you wish you had more of?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain something you're grateful for that you don't usually talk about?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain a childhood memory that shaped who you are today?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain something you're secretly really good at that might surprise me?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain a fear or insecurity you have that you haven't shared with me?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain something you've always wanted to try but never had the courage to do?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain a belief or value that's really important to you that I might not know about?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain something you're proud of that you've never told me about?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain the moment you knew you wanted to spend the rest of your life with me?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "If you could change one thing about how we handle conflict, what would it be? and how does it make you feel?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain the biggest fear you have about our future together?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "If we had to describe our love in three words, what would yours be? and how does it make you feel?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Explain the deepest truth about yourself that you've never shared with anyone?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Reflect on a quirky habit of mine you secretly love?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Reflect on something about me that surprised you when we first met?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Reflect on a small thing I do that makes you smile?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Reflect on something you've learned about yourself since we've been together?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Reflect on a memory of us that you think about often?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Reflect on something you're curious about my past that you've never asked?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Reflect on a way I make you feel most loved?",
+    "category": "ride-or-die",
+    "tier": "spark",
+    "pack": "premium",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Tell me about the most vulnerable thing you've shared with me?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Tell me about your love language and how do you show it?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something about me that surprised we when we first met?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way I make we feel most loved?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Tell me about something you've learned about yourself through our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Tell me about your favorite memory of us together?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Tell me about something you've always wanted to tell me but haven't?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Tell me about a small habit of mine that makes you smile?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "If we could swap one daily routine, what would we want to try from my life?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Tell me about a challenge we've overcome together that made us stronger?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Tell me about your favorite thing about how we handle disagreements?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Describe something you've learned about yourself through our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Tell me about a way I've helped you heal from past wounds?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Tell me about something about our relationship that scares you?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Tell me about the most important thing you've learned about love from being with me?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Tell me about a way you've changed because of our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Tell me about something you're grateful for about our relationship that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Describe a challenge we've overcome together that made us stronger?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Describe your favorite thing about how we handle disagreements?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Share something you've learned about yourself through our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Describe a way I've helped you heal from past wounds?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Describe something about our relationship that scares you?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Describe the most important thing you've learned about love from being with me?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Describe a way you've changed because of our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Describe something you're grateful for about our relationship that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Describe the most vulnerable thing you've shared with me?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Describe your love language and how do you show it?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something about me that surprised you when we first met? and how has it shaped us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way I make you feel most loved? and how has it shaped us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Explain something you've learned about yourself through our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Describe your favorite memory of us together?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Describe something you've always wanted to tell me but haven't?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Describe a small habit of mine that makes you smile?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "If we could swap one daily routine, what would you want to try from my life? and how has it shaped us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Share a challenge we've overcome together that made us stronger?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Share your favorite thing about how we handle disagreements?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Reflect on something you've learned about yourself through our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Share a way I've helped you heal from past wounds?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Share something about our relationship that scares you?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Share the most important thing you've learned about love from being with me?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Share a way you've changed because of our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Share something you're grateful for about our relationship that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Explain a challenge we've overcome together that made us stronger?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Explain your favorite thing about how we handle disagreements?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something we've learned about yourself through our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Explain a way I've helped you heal from past wounds?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Explain something about our relationship that scares you?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Explain the most important thing you've learned about love from being with me?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Explain a way you've changed because of our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Explain something you're grateful for about our relationship that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Share the most vulnerable thing you've shared with me?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Share your love language and how do you show it?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something about me that surprised you when we first met? and what does it mean for us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way I make you feel most loved? and what does it mean for us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've learned about yourself through our bond?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Share your favorite memory of us together?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Share something you've always wanted to tell me but haven't?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Share a small habit of mine that makes you smile?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "If we could swap one daily routine, what would you want to try from my life? and what does it mean for us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Reflect on a challenge we've overcome together that made us stronger?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Reflect on your favorite thing about how we handle disagreements?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've learned about yourself through us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Reflect on a way I've helped you heal from past wounds?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Reflect on something about our relationship that scares you?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Reflect on the most important thing you've learned about love from being with me?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Reflect on a way you've changed because of our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Reflect on something you're grateful for about our relationship that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a challenge we've overcome together that made us stronger? and how has it shaped us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's wer favorite thing about how we handle disagreements?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've learned about yourself through our connection?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way I've helped we heal from past wounds?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something about our relationship that scares we?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's the most important thing we've learned about love from being with me?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way we've changed because of our relationship?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something we're grateful for about our relationship that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Explain the most vulnerable thing you've shared with me?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Explain your love language and how do you show it?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something about me that surprised you when we first met? and how has it changed us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way I make you feel most loved? and how has it changed us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've learned about yourself through our love?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Explain your favorite memory of us together?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Explain something you've always wanted to tell me but haven't?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Explain a small habit of mine that makes you smile?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "If we could swap one daily routine, what would you want to try from my life? and how has it changed us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a challenge we've overcome together that made us stronger? and what does it mean for us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's your favorite thing about how we handle disagreements? and how has it shaped us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've learned about yourself through our partnership?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way I've helped you heal from past wounds? and how has it shaped us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something about our bond that scares you?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's the most important thing you've learned about love from being with me? and how has it shaped us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way you've changed because of our bond?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you're grateful for about our bond that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a challenge we've overcome together that made us stronger? and how has it changed us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's your favorite thing about how we handle disagreements? and what does it mean for us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've learned about yourself through our journey?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way I've helped you heal from past wounds? and what does it mean for us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something about us that scares you?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's the most important thing you've learned about love from being with me? and what does it mean for us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way you've changed because of us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you're grateful for about us that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Reflect on the most vulnerable thing you've shared with me?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Reflect on your love language and how do you show it?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a moment when you felt most vulnerable with me?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something about our spiritual connection that you appreciate?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've learned about yourself through our story?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Reflect on your favorite memory of us together?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Reflect on something you've always wanted to tell me but haven't?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Reflect on a small habit of mine that makes you smile?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's a way we've enhanced our understanding that you appreciate?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something about our emotional support that you cherish?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's your favorite thing about how we handle disagreements? and how has it changed us?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What's something you've learned about yourself through our life together?",
+    "category": "ride-or-die",
+    "tier": "vibe",
+    "pack": "premium",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Tell me about our biggest shared dream?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Tell me about the most vulnerable thing you've ever shared with me?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Tell me about something you want to change about our relationship?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Tell me about your deepest fear about our future together?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Tell me about the most important lesson you've learned from our relationship?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Tell me about your vision for our life together in 10 years?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Tell me about something you'd never want to lose about our connection?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Tell me about the hardest thing you've had to forgive me for?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Tell me about a dream we've never shared that could change our future together?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Tell me about the most difficult conversation we've ever had and what did it teach us?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way I've helped you heal from past wounds? and what does it mean for our future?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Tell me about your deepest insecurity and how can I help you overcome it?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our connection that scares you?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's the most important thing you've learned about love from being with me? and what does it mean for our future?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way you've changed because of our connection?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you're grateful for about our connection that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a challenge we've overcome together that made us stronger? and what does it mean for our future?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's your favorite thing about how we handle disagreements? and what does it mean for our future?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you've learned about yourself through our future?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way I've helped you heal from past wounds? and how will it impact us?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our love that scares you?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's the most important thing you've learned about love from being with me? and how will it impact us?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way you've changed because of our love?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you're grateful for about our love that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a challenge we've overcome together that made us stronger? and how will it impact us?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Describe our biggest shared dream?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Describe the most vulnerable thing you've ever shared with me?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Describe something you want to change about our relationship?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Describe your deepest fear about our future together?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Describe the most important lesson you've learned from our relationship?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Describe your vision for our life together in 10 years?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Describe something you'd never want to lose about our connection?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Describe the hardest thing you've had to forgive me for?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Describe a dream we've never shared that could change our future together?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Describe the most difficult conversation we've ever had and what did it teach us?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way I've helped you heal from past wounds? and what does it reveal about us?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Describe your deepest insecurity and how can I help you overcome it?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our partnership that scares you?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's the most important thing you've learned about love from being with me? and what does it reveal about us?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way you've changed because of our partnership?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you're grateful for about our partnership that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a challenge we've overcome together that made us stronger? and what does it reveal about us?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's your favorite thing about how we handle disagreements? and how will it impact us?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you've learned about yourself through our past?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our divine union that you believe in?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our journey that scares you?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our cosmic bond that you feel?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way you've changed because of our journey?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you're grateful for about our journey that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a moment when you felt our love was transcendent?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Share our biggest shared dream?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Share the most vulnerable thing you've ever shared with me?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Share something you want to change about our relationship?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Share your deepest fear about our future together?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Share the most important lesson you've learned from our relationship?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Share your vision for our life together in 10 years?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Share something you'd never want to lose about our connection?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Share the hardest thing you've had to forgive me for?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Share a dream we've never shared that could change our future together?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Share the most difficult conversation we've ever had and what did it teach us?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way we've reached a new level of love that you appreciate?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Share your deepest insecurity and how can I help you overcome it?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our story that scares you?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our cosmic connection that you feel?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way you've changed because of our story?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you're grateful for about our story that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a moment when you felt our love was immortal?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's your favorite thing about how we handle disagreements? and what does it reveal about us?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you've learned about yourself through our present?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our divine union that you believe in?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our life together that scares you?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our cosmic bond that you feel?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way you've changed because of our life together?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you're grateful for about our life together that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a moment when you felt our love was transcendent?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Explain our biggest shared dream?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Explain the most vulnerable thing you've ever shared with me?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Explain something you want to change about our relationship?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Explain your deepest fear about our future together?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Explain the most important lesson you've learned from our relationship?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Explain your vision for our life together in 10 years?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Explain something you'd never want to lose about our connection?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Explain the hardest thing you've had to forgive me for?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Explain a dream we've never shared that could change our future together?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Explain the most difficult conversation we've ever had and what did it teach us?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way we've reached a new level of love that you appreciate?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Explain your deepest insecurity and how can I help you overcome it?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our future that scares you?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our cosmic connection that you feel?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way you've changed because of our future?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you're grateful for about our future that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a moment when you felt our love was immortal?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our sacred bond that you honor?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you've learned about yourself through our dreams?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our divine union that you believe in?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our past that scares you?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something about our cosmic bond that you feel?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way you've changed because of our past?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's something you're grateful for about our past that you don't usually say?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a moment when you felt our love was transcendent?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Reflect on our biggest shared dream?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Reflect on the most vulnerable thing you've ever shared with me?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Reflect on something you want to change about our relationship?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Reflect on your deepest fear about our future together?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Reflect on the most important lesson you've learned from our relationship?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Reflect on your vision for our life together in 10 years?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Reflect on something you'd never want to lose about our connection?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Reflect on the hardest thing you've had to forgive me for?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Reflect on a dream we've never shared that could change our future together?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "Reflect on the most difficult conversation we've ever had and what did it teach us?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  },
+  {
+    "text": "What's a way we've reached a new level of love that you appreciate?",
+    "category": "ride-or-die",
+    "tier": "lockin",
+    "pack": "premium",
+    "difficulty": "hard"
+  }
+]

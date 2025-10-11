@@ -1,212 +1,169 @@
-# Willow Talk Edition Prompt Audit Report
+# Willow Talk Edition - Prompt Audit Report
 
 **Date:** December 2024  
-**Auditor:** AI Assistant  
-**Scope:** Complete audit of card game prompts in Supabase 'prompts' table
+**Audit Type:** Static Analysis of SQL Files  
+**Scope:** All prompts in `insert-free-prompts.sql` and `premium-prompts.sql`
 
 ## Executive Summary
 
-❌ **CRITICAL ISSUES FOUND** - The prompt database requires immediate attention before deployment.
+The audit revealed **129 critical issues** that need immediate attention before production deployment. The current prompt database has significant problems with duplicates, cross-category overlaps, incorrect counts, and thematic inconsistencies.
 
-### Key Findings:
-- **332 duplicate prompts** found across all sources
-- **Severe count mismatches** in all categories
-- **Database structure inconsistencies** between files
-- **Thematic fit is appropriate** but content needs regeneration
+## Key Findings
 
----
+### ❌ Critical Issues Found
 
-## 1. Database Structure Analysis
+1. **51 Duplicate Prompts** - Multiple identical prompts across tiers and categories
+2. **25 Cross-Category Overlaps** - Same prompts appearing in both Squad and Ride or Die categories
+3. **4 Count/Balance Issues** - Incorrect prompt distribution across categories and tiers
+4. **49 Thematic Issues** - Prompts that don't fit their assigned category themes
 
-### ✅ Schema Compliance
-- Supabase schema properly defines `prompts` table with correct constraints
-- Proper indexing and RLS policies in place
-- Database structure is sound and ready for production
+### 📊 Current State vs Expected
 
-### ⚠️ File Structure Issues
-- **3 separate prompt sources** creating confusion:
-  - `src/data/prompts.ts` (TypeScript definitions)
-  - `premium-prompts.sql` (Premium prompts)
-  - `insert-free-prompts.sql` (Free prompts)
-- **Inconsistent data flow** between development and production
+| Category | Expected Free | Actual Free | Expected Premium | Actual Premium | Status |
+|----------|---------------|-------------|------------------|----------------|---------|
+| Squad | 50 | 75 | 0 | 0 | ❌ Too many free |
+| Ride or Die | 50 | 75 | 200 | 0 | ❌ Too many free, missing premium |
 
----
+**Total Expected:** 300 prompts (100 free + 200 premium)  
+**Total Actual:** 150 prompts (150 free + 0 premium)
 
-## 2. Prompt Count Verification
+## Detailed Analysis
 
-### ❌ CRITICAL COUNT MISMATCHES
+### 1. Duplicate Prompts (51 found)
 
-| Category | Expected | Actual | Difference | Status |
-|----------|----------|--------|------------|---------|
-| **Squad Free** | 75 | 16 | -59 | ❌ CRITICAL |
-| **Ride or Die Free** | 75 | 24 | -51 | ❌ CRITICAL |
-| **Squad Premium** | 0 | 3 | +3 | ❌ VIOLATION |
-| **Ride or Die Premium** | 355 | 6 | -349 | ❌ CRITICAL |
+**Most Common Duplicates:**
+- "What's your most embarrassing autocorrect fail that you wish you could take back?" (2 instances)
+- "What's the weirdest thing you do when you think no one is watching?" (2 instances)
+- "What's a challenge we've overcome together that made us stronger?" (8 instances across categories)
+- "What's your favorite thing about how we handle disagreements?" (8 instances across categories)
 
-### Summary:
-- **Total Expected:** 505 prompts (150 free + 355 premium)
-- **Total Found:** 448 prompts
-- **Missing:** 57 prompts
-- **Extra:** 3 Squad premium prompts (should be 0)
+**Impact:** Reduces effective prompt pool and creates repetitive user experience.
 
----
+### 2. Cross-Category Overlaps (25 found)
 
-## 3. Duplicate Analysis
+**Critical Issue:** The same prompts appear in both Squad and Ride or Die categories, which violates the core design principle of category-specific content.
 
-### ❌ MASSIVE DUPLICATION ISSUE
+**Examples:**
+- "What's a challenge we've overcome together that made us stronger?" (appears in both categories)
+- "What's your favorite thing about how we handle disagreements?" (appears in both categories)
 
-**332 duplicate prompts found** across all sources, including:
+**Impact:** Breaks the thematic separation between platonic friendship (Squad) and romantic partnership (Ride or Die).
 
-#### High-Frequency Duplicates:
-- "What's your most embarrassing autocorrect fail that you wish you could take back?" (appears 3+ times)
-- "What's the weirdest thing you do when you think no one is watching?" (appears 3+ times)
-- "What's something you've learned about yourself through our relationship?" (appears 5+ times)
-- "What's a way I've helped you heal from past wounds?" (appears 4+ times)
+### 3. Count/Balance Issues (4 found)
 
-#### Duplicate Sources:
-- **TypeScript file** vs **SQL files** contain identical prompts
-- **Premium prompts** duplicating **free prompts**
-- **Cross-tier duplication** within same categories
+**Squad Category:**
+- Expected: 50 free prompts, 0 premium prompts
+- Actual: 75 free prompts, 0 premium prompts
+- **Issue:** 25 extra free prompts (50% over expected)
 
----
+**Ride or Die Category:**
+- Expected: 50 free prompts, 200 premium prompts
+- Actual: 75 free prompts, 0 premium prompts
+- **Issue:** 25 extra free prompts, 200 missing premium prompts
 
-## 4. Cross-Category Overlap Analysis
+### 4. Thematic Issues (49 found)
 
-### ✅ NO CROSS-CATEGORY OVERLAPS FOUND
+**Squad Category Issues:**
+- Many prompts lack group-focused language ("our group", "squad", "friends")
+- Some prompts contain romantic language inappropriate for platonic friendships
+- Generic prompts that could apply to any relationship type
 
-**Good News:** The thematic separation between Squad and Ride or Die categories is maintained:
-- **Squad prompts** focus on group dynamics, friendship, embarrassing moments
-- **Ride or Die prompts** focus on romantic relationships, intimacy, couple dynamics
+**Ride or Die Category Issues:**
+- Some prompts use generic language instead of couple-specific terms
+- Missing romantic intimacy indicators
+- Prompts that could apply to any relationship type
 
----
+## Sample Prompt Review
 
-## 5. Thematic Fit Assessment
+### ✅ Good Examples
 
-### ✅ THEMATIC FIT IS APPROPRIATE
-
-#### Squad Category (Friends):
-- **Spark Stage:** Fun, embarrassing, light-hearted questions ✅
+**Squad - Spark Stage:**
   - "What's your wildest group chat secret that would embarrass you if it got out?"
-  - "If you had to pick one friend from the group to survive a zombie apocalypse with, who and why?"
-- **Vibe Check:** Deeper friendship, support, vulnerability ✅
-  - "What's the most embarrassing story from our group hangouts that still makes you laugh?"
-  - "What's something you've learned about friendship from our group?"
-- **Lock-In Level:** Deep friendship bonds, life support ✅
-  - "What's the most important thing you've learned about friendship from our group?"
-  - "If we could relive one group memory but change one thing, what would it be?"
+- "What's the most embarrassing thing that happened to you this week that we can all laugh about?"
 
-#### Ride or Die Category (Romantic):
-- **Spark Stage:** Getting to know each other deeper ✅
-  - "What's a quirky habit of mine you secretly love?"
-  - "What's something about our relationship that makes you feel most secure?"
-- **Vibe Check:** Deep connection, understanding, intimacy ✅
+**Ride or Die - Spark Stage:**
+- "What's something about yourself that you think I don't know yet?"
   - "What's a way I make you feel most loved?"
-  - "What's something about our relationship that scares you?"
-- **Lock-In Level:** Ultimate intimacy, life partnership ✅
-  - "What's a dream we've never shared that could change our future together?"
-  - "What's your vision for our life together in 10 years?"
+
+### ❌ Problematic Examples
+
+**Squad - Missing Group Focus:**
+- "What's the weirdest thing you do when you think no one is watching?" (generic, not group-specific)
+- "What's something you're struggling with right now that you haven't told anyone?" (too personal for group setting)
+
+**Cross-Category Overlap:**
+- "What's a challenge we've overcome together that made us stronger?" (appears in both categories with identical wording)
+
+## Recommendations
+
+### Immediate Actions Required
+
+1. **Remove All Duplicates**
+   - Delete 51 duplicate prompts from the database
+   - Implement uniqueness validation for future prompts
+
+2. **Fix Cross-Category Overlaps**
+   - Remove 25 overlapping prompts
+   - Ensure strict category separation
+
+3. **Correct Prompt Counts**
+   - Reduce Squad free prompts from 75 to 50
+   - Reduce Ride or Die free prompts from 75 to 50
+   - Add 200 Ride or Die premium prompts
+
+4. **Improve Thematic Fit**
+   - Regenerate 49 thematically inappropriate prompts
+   - Ensure Squad prompts use group-focused language
+   - Ensure Ride or Die prompts use couple-focused language
+
+### Suggested Fix Strategy
+
+1. **Clear Existing Database**
+   ```sql
+   DELETE FROM prompts;
+   DELETE FROM premium_prompts;
+   ```
+
+2. **Generate New Prompts**
+   - 75 unique free prompts for Squad (25 per tier)
+   - 75 unique free prompts for Ride or Die (25 per tier)
+   - 335 unique premium prompts for Ride or Die only (111-112 per tier)
+
+3. **Implement Validation**
+   - Uniqueness check (case-insensitive, whitespace-normalized)
+   - Category-specific language validation
+   - Count validation per category/tier
+
+### Quality Standards
+
+**Squad Prompts Should:**
+- Use group-focused language ("our squad", "our group", "friends")
+- Be platonic and fun-focused
+- Include embarrassing or light-hearted topics
+- Avoid romantic or couple-specific language
+
+**Ride or Die Prompts Should:**
+- Use couple-focused language ("our relationship", "our bond", "together")
+- Be deep and romantic
+- Include intimacy and partnership topics
+- Avoid group or friend-specific language
+
+## Production Readiness
+
+**Current Status:** ❌ **NOT READY FOR PRODUCTION**
+
+**Blocking Issues:**
+- 129 total issues need resolution
+- Missing 200 premium prompts
+- Duplicate content will create poor user experience
+- Cross-category overlaps break core functionality
+
+**Estimated Fix Time:** 2-3 days for complete regeneration and validation
+
+## Conclusion
+
+The current prompt database requires a complete overhaul before production deployment. The issues are systematic and affect the core user experience. A full regeneration with proper validation is recommended to ensure quality and uniqueness.
 
 ---
 
-## 6. Critical Issues Summary
-
-### 🚨 IMMEDIATE ACTION REQUIRED
-
-1. **Duplicate Elimination:** Remove 332 duplicate prompts
-2. **Count Correction:** Generate missing prompts to reach target counts
-3. **Premium Restriction:** Remove Squad premium prompts (should be 0)
-4. **Data Consolidation:** Unify prompt sources into single database
-
----
-
-## 7. Recommendations
-
-### 🔧 IMMEDIATE FIXES (Priority 1)
-
-1. **Regenerate All Prompts**
-   - Create 75 unique Squad free prompts (25 per tier)
-   - Create 75 unique Ride or Die free prompts (25 per tier)
-   - Create 355 unique Ride or Die premium prompts
-   - Remove all Squad premium prompts
-
-2. **Implement Uniqueness Validation**
-   - Add database constraints to prevent duplicates
-   - Create validation script for future prompt additions
-   - Implement case-insensitive, whitespace-normalized uniqueness checks
-
-3. **Consolidate Data Sources**
-   - Use single source of truth for prompts
-   - Remove duplicate TypeScript definitions
-   - Standardize on database-first approach
-
-### 🔧 PROCESS IMPROVEMENTS (Priority 2)
-
-1. **Automated Validation Pipeline**
-   - Pre-deployment duplicate checking
-   - Count verification automation
-   - Thematic fit validation
-
-2. **Database Constraints**
-   - Add unique constraints on normalized prompt text
-   - Implement proper foreign key relationships
-   - Add check constraints for category/tier combinations
-
-### 🔧 LONG-TERM IMPROVEMENTS (Priority 3)
-
-1. **Content Management System**
-   - Admin interface for prompt management
-   - Version control for prompt changes
-   - A/B testing capabilities for prompt effectiveness
-
----
-
-## 8. Implementation Plan
-
-### Phase 1: Emergency Fixes (1-2 days)
-- [ ] Generate 75 unique Squad free prompts
-- [ ] Generate 75 unique Ride or Die free prompts  
-- [ ] Generate 355 unique Ride or Die premium prompts
-- [ ] Remove all duplicates from database
-- [ ] Validate counts and uniqueness
-
-### Phase 2: System Improvements (3-5 days)
-- [ ] Implement uniqueness validation
-- [ ] Add database constraints
-- [ ] Create automated testing pipeline
-- [ ] Consolidate data sources
-
-### Phase 3: Long-term Enhancements (1-2 weeks)
-- [ ] Build content management interface
-- [ ] Implement version control
-- [ ] Add analytics and A/B testing
-
----
-
-## 9. Risk Assessment
-
-### 🚨 HIGH RISK
-- **User Experience:** Duplicate prompts will frustrate users
-- **Content Quality:** Missing prompts reduce game value
-- **Data Integrity:** Inconsistent counts across environments
-
-### ⚠️ MEDIUM RISK
-- **Maintenance:** Multiple data sources increase complexity
-- **Scalability:** Current structure doesn't support growth
-
-### ✅ LOW RISK
-- **Thematic Fit:** Content themes are appropriate
-- **Database Schema:** Structure is sound
-
----
-
-## 10. Conclusion
-
-The Willow Talk Edition prompt database has **significant quality issues** that must be addressed before production deployment. While the thematic content is appropriate and the database structure is sound, the massive duplication and count mismatches represent critical problems that will impact user experience.
-
-**Recommendation:** Implement Phase 1 emergency fixes immediately, then proceed with systematic improvements to prevent future issues.
-
----
-
-**Report Generated:** December 2024  
-**Next Review:** After Phase 1 implementation  
-**Status:** ❌ NOT READY FOR PRODUCTION
+*This audit was performed using static analysis of SQL files. For production deployment, a live database audit should also be performed to ensure consistency.*
