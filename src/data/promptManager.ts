@@ -1,11 +1,11 @@
-import { prompts, getPromptStats, type Prompt } from './prompts';
+import { cleanPrompts, getPromptStats, type Prompt } from './cleanPrompts';
 
 export class PromptManager {
   private static instance: PromptManager;
-  private allPrompts: Record<string, Prompt[]>;
+  private allPrompts: Record<string, Record<string, Prompt[]>>;
 
   private constructor() {
-    this.allPrompts = { ...prompts };
+    this.allPrompts = { ...cleanPrompts };
   }
 
   public static getInstance(): PromptManager {
@@ -17,39 +17,46 @@ export class PromptManager {
 
   // Get all prompts for a tier
   public getPromptsForTier(tier: 'spark' | 'vibe' | 'lockin'): Prompt[] {
-    return this.allPrompts[tier] || [];
+    const squadPrompts = this.allPrompts.squad?.[tier] || [];
+    const rideOrDiePrompts = this.allPrompts['ride-or-die']?.[tier] || [];
+    return [...squadPrompts, ...rideOrDiePrompts];
   }
 
   // Get a specific prompt by ID
   public getPromptById(id: string): Prompt | undefined {
-    for (const tier of Object.values(this.allPrompts)) {
-      const prompt = tier.find(p => p.id === id);
-      if (prompt) return prompt;
+    for (const category of Object.values(this.allPrompts)) {
+      for (const tier of Object.values(category)) {
+        const prompt = tier.find(p => p.id === id);
+        if (prompt) return prompt;
+      }
     }
     return undefined;
   }
 
   // Get prompts by category
   public getPromptsByCategory(tier: 'spark' | 'vibe' | 'lockin', category: string): Prompt[] {
-    return this.allPrompts[tier].filter(prompt => prompt.category === category);
+    if (category === 'squad' || category === 'ride-or-die') {
+      return this.allPrompts[category]?.[tier] || [];
+    }
+    return [];
   }
 
   // Get prompts by difficulty
   public getPromptsByDifficulty(tier: 'spark' | 'vibe' | 'lockin', difficulty: 'easy' | 'medium' | 'hard'): Prompt[] {
-    return this.allPrompts[tier].filter(prompt => prompt.difficulty === difficulty);
+    const allPrompts = this.getPromptsForTier(tier);
+    return allPrompts.filter(prompt => prompt.difficulty === difficulty);
   }
 
   // Get random prompts from a tier
   public getRandomPrompts(tier: 'spark' | 'vibe' | 'lockin', count: number = 5): Prompt[] {
-    const tierPrompts = this.allPrompts[tier];
+    const tierPrompts = this.getPromptsForTier(tier);
     const shuffled = [...tierPrompts].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
   }
 
   // Get all categories for a tier
   public getCategoriesForTier(tier: 'spark' | 'vibe' | 'lockin'): string[] {
-    const categories = new Set(this.allPrompts[tier].map(prompt => prompt.category));
-    return Array.from(categories).sort();
+    return ['squad', 'ride-or-die'];
   }
 
   // Get statistics
