@@ -30,7 +30,7 @@ export default function AnswerInputImproved({ onSubmit, isRecording, setIsRecord
     }
 
     // Check for speech recognition support
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     
     if (!SpeechRecognition) {
       setErrorMessage('Speech recognition not supported in this browser');
