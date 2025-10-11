@@ -12,7 +12,7 @@ import TierSelector from '@/components/TierSelector';
 import AnswerInput from '@/components/AnswerInput';
 import StarRating from '@/components/StarRating';
 import AdaptiveNudge from '@/components/AdaptiveNudge';
-import { prompts, getRandomPrompts, type Prompt } from '@/data/prompts';
+import { prompts, getPromptsByCategoryAndTier, getRandomPrompts, type Prompt } from '@/data/prompts';
 
 // Prompt interface is now imported from @/data/prompts
 
@@ -44,36 +44,16 @@ function GamePage() {
     lockin: false
   });
 
-  // Filter prompts based on category
+  // Get prompts based on category and tier - now properly separated
   const getFilteredPrompts = (tier: 'spark' | 'vibe' | 'lockin') => {
-    const tierPrompts = prompts[tier];
-    
     if (category === 'squad') {
-      // For Squad Vibes, filter for friendship-appropriate questions
-      return tierPrompts.filter(prompt => {
-        // Check if prompt has categoryType and it's squad or both
-        if (prompt.categoryType) {
-          return prompt.categoryType === 'squad' || prompt.categoryType === 'both';
-        }
-        
-        // Fallback to text-based filtering for existing prompts
-        return !prompt.category.toLowerCase().includes('intimacy') &&
-               !prompt.category.toLowerCase().includes('romance') &&
-               !prompt.category.toLowerCase().includes('love') &&
-               !prompt.category.toLowerCase().includes('sexual') &&
-               !prompt.text.toLowerCase().includes('partner') &&
-               !prompt.text.toLowerCase().includes('relationship') &&
-               !prompt.text.toLowerCase().includes('our ') &&
-               !prompt.text.toLowerCase().includes('together') &&
-               !prompt.text.toLowerCase().includes('us ');
-      });
+      return getPromptsByCategoryAndTier('squad', tier);
     } else if (category === 'ride-or-die') {
-      // For Ride or Die, include all questions (couples can handle everything)
-      return tierPrompts;
+      return getPromptsByCategoryAndTier('ride-or-die', tier);
     }
     
-    // Default to all prompts if no category
-    return tierPrompts;
+    // Default to empty array if no category
+    return [];
   };
 
   const currentPrompts = getFilteredPrompts(currentTier);
@@ -81,8 +61,9 @@ function GamePage() {
 
   // Calculate statistics
   const getTotalQuestions = () => {
-    return Object.keys(prompts).reduce((total, tier) => {
-      return total + getFilteredPrompts(tier as 'spark' | 'vibe' | 'lockin').length;
+    const tiers: ('spark' | 'vibe' | 'lockin')[] = ['spark', 'vibe', 'lockin'];
+    return tiers.reduce((total, tier) => {
+      return total + getFilteredPrompts(tier).length;
     }, 0);
   };
 
