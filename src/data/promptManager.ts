@@ -65,7 +65,7 @@ export class PromptManager {
   }
 
   // Get all prompts (for admin purposes)
-  public getAllPrompts(): Record<string, Prompt[]> {
+  public getAllPrompts(): Record<string, Record<string, Prompt[]>> {
     return { ...this.allPrompts };
   }
 
