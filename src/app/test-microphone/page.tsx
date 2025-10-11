@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import AnswerInputImproved from '@/components/AnswerInputImproved';
+import AnswerInput from '@/components/AnswerInput';
 
 export default function TestMicrophonePage() {
   const [isRecording, setIsRecording] = useState(false);
@@ -106,7 +106,7 @@ export default function TestMicrophonePage() {
             Try the microphone button below. If it works, you should see your speech converted to text.
           </p>
           
-          <AnswerInputImproved
+          <AnswerInput
             onSubmit={handleAnswerSubmit}
             isRecording={isRecording}
             setIsRecording={setIsRecording}
