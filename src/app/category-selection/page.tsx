@@ -116,12 +116,12 @@ export default function CategorySelectionPage() {
                   {/* CTA */}
                   <div className="flex justify-center">
                     <motion.div
-                      className="flex items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-xl font-craftwork-heavy shadow-lg"
+                      className="flex items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-xl font-craftwork font-medium text-sm shadow-lg"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
                       <span>Start Squad Session</span>
-                      <ArrowRightIcon className="w-5 h-5" />
+                      <ArrowRightIcon className="w-4 h-4" />
                     </motion.div>
                   </div>
                 </div>
@@ -183,12 +183,12 @@ export default function CategorySelectionPage() {
                   {/* CTA */}
                   <div className="flex justify-center">
                     <motion.div
-                      className="flex items-center gap-3 bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 py-3 rounded-xl font-craftwork-heavy shadow-lg"
+                      className="flex items-center gap-3 bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 py-3 rounded-xl font-craftwork font-medium text-sm shadow-lg"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
                       <span>Start Ride or Die</span>
-                      <ArrowRightIcon className="w-5 h-5" />
+                      <ArrowRightIcon className="w-4 h-4" />
                     </motion.div>
                   </div>
                 </div>

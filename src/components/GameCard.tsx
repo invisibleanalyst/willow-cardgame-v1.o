@@ -43,76 +43,120 @@ export default function GameCard({ prompt, onSwipeLeft, onSwipeRight, gameCatego
   const y = useMotionValue(0);
   const controls = useAnimation();
 
-  // Dynamic color system based on category type
+  // Nuanced color system using the new sophisticated palette
   const getCardDesign = (category: string) => {
     const categoryLower = category.toLowerCase();
     
-    // Green variants for fun/positive categories
-    if (categoryLower.includes('fun') || categoryLower.includes('quirky') || categoryLower.includes('secrets') || categoryLower.includes('adventure')) {
+    // Soft Pink (#FFD7E0) for romantic/intimate categories
+    if (categoryLower.includes('romance') || categoryLower.includes('love') || categoryLower.includes('intimacy')) {
       return {
-        background: "linear-gradient(135deg, #10B981 0%, #059669 100%)",
+        background: "linear-gradient(135deg, #FFD7E0 0%, #FFB3D1 100%)",
+        textColor: "#8B1538",
+        accentColor: "#A4B8FD",
+        iconBg: "rgba(164, 184, 253, 0.2)",
+        borderColor: "rgba(255, 215, 224, 0.4)"
+      };
+    }
+    
+    // Pale Blue (#EAF0F8) for calm/reflective categories
+    if (categoryLower.includes('memories') || categoryLower.includes('dreams') || categoryLower.includes('lifestyle')) {
+      return {
+        background: "linear-gradient(135deg, #EAF0F8 0%, #D1E7DD 100%)",
+        textColor: "#2D3748",
+        accentColor: "#7593CD",
+        iconBg: "rgba(117, 147, 205, 0.2)",
+        borderColor: "rgba(234, 240, 248, 0.4)"
+      };
+    }
+    
+    // Medium Blue (#7593CD) for thoughtful/connection categories
+    if (categoryLower.includes('connection') || categoryLower.includes('vulnerability') || categoryLower.includes('deep')) {
+      return {
+        background: "linear-gradient(135deg, #7593CD 0%, #5A7BC7 100%)",
         textColor: "#FFFFFF",
-        accentColor: "#FEF3C7",
-        iconBg: "rgba(254, 243, 199, 0.2)",
-        borderColor: "rgba(16, 185, 129, 0.3)"
+        accentColor: "#BFFCDD",
+        iconBg: "rgba(191, 252, 221, 0.2)",
+        borderColor: "rgba(117, 147, 205, 0.4)"
       };
     }
     
-    // Black variants for deep/intimate categories
-    if (categoryLower.includes('intimacy') || categoryLower.includes('vulnerability') || categoryLower.includes('deep') || categoryLower.includes('connection')) {
+    // Periwinkle (#A4B8FD) for dreamy/imaginative categories
+    if (categoryLower.includes('adventure') || categoryLower.includes('quirky') || categoryLower.includes('funny')) {
       return {
-        background: "linear-gradient(135deg, #1F2937 0%, #111827 100%)",
-        textColor: "#F9FAFB",
-        accentColor: "#A78BFA",
-        iconBg: "rgba(167, 139, 250, 0.2)",
-        borderColor: "rgba(31, 41, 55, 0.3)"
+        background: "linear-gradient(135deg, #A4B8FD 0%, #8FA4F7 100%)",
+        textColor: "#2D3748",
+        accentColor: "#FFD7E0",
+        iconBg: "rgba(255, 215, 224, 0.2)",
+        borderColor: "rgba(164, 184, 253, 0.4)"
       };
     }
     
-    // White variants for light/neutral categories
-    if (categoryLower.includes('lifestyle') || categoryLower.includes('personality') || categoryLower.includes('memories') || categoryLower.includes('dreams')) {
+    // Mint Green (#BFFCDD) for growth/positive categories
+    if (categoryLower.includes('personality') || categoryLower.includes('fun') || categoryLower.includes('secrets')) {
+      return {
+        background: "linear-gradient(135deg, #BFFCDD 0%, #A8F5CC 100%)",
+        textColor: "#1A365D",
+        accentColor: "#7593CD",
+        iconBg: "rgba(117, 147, 205, 0.2)",
+        borderColor: "rgba(191, 252, 221, 0.4)"
+      };
+    }
+    
+    // Deep Black (#000000) for special/deep dive categories
+    if (categoryLower.includes('lockin') || categoryLower.includes('deep') || categoryLower.includes('intimate')) {
+      return {
+        background: "linear-gradient(135deg, #000000 0%, #1A1A1A 100%)",
+        textColor: "#FFFFFF",
+        accentColor: "#A4B8FD",
+        iconBg: "rgba(164, 184, 253, 0.3)",
+        borderColor: "rgba(0, 0, 0, 0.6)"
+      };
+    }
+    
+    // Pure White (#FFFFFF) for neutral/clean categories
+    if (categoryLower.includes('lifestyle') || categoryLower.includes('neutral') || categoryLower.includes('clean')) {
       return {
         background: "linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%)",
-        textColor: "#1F2937",
-        accentColor: "#3B82F6",
-        iconBg: "rgba(59, 130, 246, 0.1)",
-        borderColor: "rgba(255, 255, 255, 0.3)"
+        textColor: "#2D3748",
+        accentColor: "#7593CD",
+        iconBg: "rgba(117, 147, 205, 0.1)",
+        borderColor: "rgba(255, 255, 255, 0.4)"
       };
     }
     
-    // Default dynamic based on tier
+    // Default tier-based fallbacks using the new palette
     switch (prompt.tier) {
       case 'spark':
         return {
-          background: "linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%)",
-          textColor: "#92400E",
-          accentColor: "#DC2626",
-          iconBg: "rgba(220, 38, 38, 0.2)",
-          borderColor: "rgba(254, 243, 199, 0.3)"
+          background: "linear-gradient(135deg, #BFFCDD 0%, #A8F5CC 100%)", // Mint Green
+          textColor: "#1A365D",
+          accentColor: "#7593CD",
+          iconBg: "rgba(117, 147, 205, 0.2)",
+          borderColor: "rgba(191, 252, 221, 0.4)"
         };
       case 'vibe':
         return {
-          background: "linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%)",
-          textColor: "#1E40AF",
-          accentColor: "#059669",
-          iconBg: "rgba(5, 150, 105, 0.2)",
-          borderColor: "rgba(219, 234, 254, 0.3)"
+          background: "linear-gradient(135deg, #A4B8FD 0%, #8FA4F7 100%)", // Periwinkle
+          textColor: "#2D3748",
+          accentColor: "#FFD7E0",
+          iconBg: "rgba(255, 215, 224, 0.2)",
+          borderColor: "rgba(164, 184, 253, 0.4)"
         };
       case 'lockin':
         return {
-          background: "linear-gradient(135deg, #F3E8FF 0%, #E9D5FF 100%)",
-          textColor: "#6B21A8",
-          accentColor: "#EC4899",
-          iconBg: "rgba(236, 72, 153, 0.2)",
-          borderColor: "rgba(243, 232, 255, 0.3)"
+          background: "linear-gradient(135deg, #7593CD 0%, #5A7BC7 100%)", // Medium Blue
+          textColor: "#FFFFFF",
+          accentColor: "#BFFCDD",
+          iconBg: "rgba(191, 252, 221, 0.2)",
+          borderColor: "rgba(117, 147, 205, 0.4)"
         };
       default:
         return {
-          background: "linear-gradient(135deg, #10B981 0%, #059669 100%)",
-          textColor: "#FFFFFF",
-          accentColor: "#FEF3C7",
-          iconBg: "rgba(254, 243, 199, 0.2)",
-          borderColor: "rgba(16, 185, 129, 0.3)"
+          background: "linear-gradient(135deg, #EAF0F8 0%, #D1E7DD 100%)", // Pale Blue
+          textColor: "#2D3748",
+          accentColor: "#7593CD",
+          iconBg: "rgba(117, 147, 205, 0.2)",
+          borderColor: "rgba(234, 240, 248, 0.4)"
         };
     }
   };
@@ -121,9 +165,9 @@ export default function GameCard({ prompt, onSwipeLeft, onSwipeRight, gameCatego
 
   const xInput = [-100, 0, 100];
   const background = useTransform(x, xInput, [
-    "linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%)",
+    "linear-gradient(135deg, #FFD7E0 0%, #FFB3D1 100%)", // Soft Pink for skip
     cardDesign.background,
-    "linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%)"
+    "linear-gradient(135deg, #BFFCDD 0%, #A8F5CC 100%)"  // Mint Green for answer
   ]);
 
   const rotate = useTransform(x, [-200, 200], [-30, 30]);
@@ -317,11 +361,11 @@ export default function GameCard({ prompt, onSwipeLeft, onSwipeRight, gameCatego
               {getCategoryIcon(prompt.category)}
             </div>
             <div className="flex-1">
-              <h3 className="font-craftwork-heavy text-xl sm:text-2xl capitalize tracking-tight" style={{ color: cardDesign.textColor }}>
-                {prompt.tier.toUpperCase()}
+              <h3 className="font-craftwork text-lg sm:text-xl capitalize tracking-tight font-medium" style={{ color: cardDesign.textColor }}>
+                {prompt.tier}
               </h3>
-              <p className="font-craftwork text-xs sm:text-sm opacity-70 tracking-wide" style={{ color: cardDesign.textColor }}>
-                {prompt.category.toUpperCase()}
+              <p className="font-craftwork text-xs sm:text-sm opacity-70 tracking-wide font-light" style={{ color: cardDesign.textColor }}>
+                {prompt.category}
               </p>
             </div>
           </div>
@@ -350,7 +394,7 @@ export default function GameCard({ prompt, onSwipeLeft, onSwipeRight, gameCatego
         <div className="flex-1 flex items-center justify-center mb-6 sm:mb-8">
           <div className="text-center">
             <motion.h2
-              className="font-craftwork text-lg sm:text-xl lg:text-2xl leading-relaxed px-4 sm:px-6"
+              className="font-craftwork text-base sm:text-lg lg:text-xl leading-relaxed px-4 sm:px-6"
               style={{ color: cardDesign.textColor }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -383,7 +427,7 @@ export default function GameCard({ prompt, onSwipeLeft, onSwipeRight, gameCatego
             onTap={() => onSwipeLeft()}
           >
             <ArrowLeftIcon className="w-4 h-4" />
-            <span className="font-craftwork text-xs sm:text-sm font-medium tracking-wide">SKIP</span>
+            <span className="font-craftwork text-xs font-medium tracking-wide">Skip</span>
           </motion.div>
 
           <motion.div
@@ -397,7 +441,7 @@ export default function GameCard({ prompt, onSwipeLeft, onSwipeRight, gameCatego
             whileTap={{ scale: 0.95 }}
             onTap={() => onSwipeRight()}
           >
-            <span className="font-craftwork text-xs sm:text-sm font-medium tracking-wide">ANSWER</span>
+            <span className="font-craftwork text-xs font-medium tracking-wide">Answer</span>
             <ArrowRightIcon className="w-4 h-4" />
           </motion.div>
         </div>

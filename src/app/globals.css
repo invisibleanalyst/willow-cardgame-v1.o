@@ -414,10 +414,10 @@ button, [role="button"] {
 
 .btn-willow-outline {
   background: rgba(0, 255, 170, 0.05);
-  color: var(--willow-neon-green);
+  color: #FFFFFF;
   border: 2px solid var(--willow-neon-green);
   font-weight: 600;
-  text-shadow: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -460,23 +460,27 @@ button, [role="button"] {
 /* Dark mode button improvements */
 .dark .btn-willow-outline {
   background: rgba(0, 255, 170, 0.08);
-  color: var(--willow-neon-green);
+  color: #FFFFFF;
   border-color: var(--willow-neon-green);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .dark .btn-willow-outline:hover {
   color: #000000;
+  text-shadow: none;
 }
 
 /* Light mode button improvements */
 .light .btn-willow-outline {
   background: rgba(0, 255, 170, 0.08);
-  color: var(--willow-neon-green);
+  color: #FFFFFF;
   border-color: var(--willow-neon-green);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .light .btn-willow-outline:hover {
   color: #000000;
+  text-shadow: none;
 }
 
 /* Mobile Touch Optimizations */

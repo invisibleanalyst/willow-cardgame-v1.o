@@ -19,6 +19,16 @@ const config: Config = {
           "light-gray": "#E9ECEF",
           "dark-gray": "#495057",
         },
+        // Nuanced card background palette
+        card: {
+          "soft-pink": "#FFD7E0",
+          "pale-blue": "#EAF0F8", 
+          "medium-blue": "#7593CD",
+          "deep-black": "#000000",
+          "periwinkle": "#A4B8FD",
+          "mint-green": "#BFFCDD",
+          "pure-white": "#FFFFFF",
+        },
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

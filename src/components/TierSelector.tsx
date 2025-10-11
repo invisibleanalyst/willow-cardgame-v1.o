@@ -52,7 +52,7 @@ export default function TierSelector({ currentTier, isUnlocked, onTierChange, ti
             key={tier.id}
             onClick={() => onTierChange(tier.id)}
             disabled={!isUnlocked[tier.id]}
-            className={`relative flex flex-col items-center gap-1 lg:gap-2 p-2 lg:p-3 rounded-xl transition-all duration-300 min-w-[80px] lg:min-w-[100px] ${
+            className={`relative flex flex-col items-center gap-1 lg:gap-2 pt-3 px-2 pb-2 lg:pt-4 lg:px-3 lg:pb-3 rounded-xl transition-all duration-300 min-w-[90px] lg:min-w-[110px] ${
               currentTier === tier.id
                 ? 'bg-willow-green text-willow-dark shadow-lg'
                 : isUnlocked[tier.id]
@@ -64,7 +64,7 @@ export default function TierSelector({ currentTier, isUnlocked, onTierChange, ti
           >
             {/* Lock icon for locked tiers */}
             {!isUnlocked[tier.id] && (
-              <div className="absolute -top-1 -right-1 w-5 h-5 bg-willow-gray rounded-full flex items-center justify-center">
+              <div className="absolute top-1 right-1 w-5 h-5 bg-willow-gray rounded-full flex items-center justify-center">
                 <LockIcon className="w-3 h-3 text-willow-dark" />
               </div>
             )}
@@ -81,18 +81,18 @@ export default function TierSelector({ currentTier, isUnlocked, onTierChange, ti
           </div>
 
           {/* Tier name */}
-          <h3 className="font-craftwork-heavy text-xs lg:text-sm">
+          <h3 className="font-craftwork text-xs lg:text-sm text-center whitespace-nowrap font-medium tracking-wide">
             {tier.name}
           </h3>
 
           {/* Tier description */}
-          <p className="font-craftwork text-xs text-center opacity-80 hidden lg:block">
+          <p className="font-craftwork text-xs text-center opacity-75 hidden lg:block font-light tracking-wide">
             {tier.description}
           </p>
 
           {/* Question count */}
           {tierStats && (
-            <div className="font-craftwork text-xs opacity-60">
+            <div className="font-craftwork text-xs opacity-60 font-light">
               {tierStats[tier.id]} questions
             </div>
           )}
@@ -111,14 +111,14 @@ export default function TierSelector({ currentTier, isUnlocked, onTierChange, ti
       </div>
 
       {/* Mobile Horizontal Scrollable Layout */}
-      <div className="md:hidden overflow-x-auto pb-4">
+      <div className="md:hidden overflow-x-auto pb-4 pt-2">
         <div className="flex gap-3 px-4 min-w-max">
           {tiers.map((tier) => (
             <motion.button
               key={tier.id}
               onClick={() => onTierChange(tier.id)}
               disabled={!isUnlocked[tier.id]}
-              className={`relative flex flex-col items-center gap-1 p-3 rounded-xl transition-all duration-300 min-w-[70px] flex-shrink-0 pb-4 ${
+              className={`relative flex flex-col items-center gap-1 pt-4 px-3 pb-4 rounded-xl transition-all duration-300 min-w-[85px] flex-shrink-0 ${
                 currentTier === tier.id
                   ? 'bg-willow-green text-willow-dark shadow-lg'
                   : isUnlocked[tier.id]
@@ -129,7 +129,7 @@ export default function TierSelector({ currentTier, isUnlocked, onTierChange, ti
             >
               {/* Lock icon for locked tiers */}
               {!isUnlocked[tier.id] && (
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-willow-gray rounded-full flex items-center justify-center">
+                <div className="absolute top-1 right-1 w-4 h-4 bg-willow-gray rounded-full flex items-center justify-center">
                   <LockIcon className="w-2 h-2 text-willow-dark" />
                 </div>
               )}
@@ -146,13 +146,13 @@ export default function TierSelector({ currentTier, isUnlocked, onTierChange, ti
               </div>
 
               {/* Tier name */}
-              <h3 className="font-craftwork-heavy text-xs leading-tight">
+              <h3 className="font-craftwork text-xs leading-tight text-center whitespace-nowrap font-medium tracking-wide">
                 {tier.name}
               </h3>
 
               {/* Question count */}
               {tierStats && (
-                <div className="font-craftwork text-xs opacity-60 leading-tight">
+                <div className="font-craftwork text-xs opacity-60 leading-tight text-center font-light">
                   {tierStats[tier.id]}
                 </div>
               )}

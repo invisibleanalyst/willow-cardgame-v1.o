@@ -706,3 +706,35 @@ export const QuirkyIcon: React.FC<IconProps> = ({ className = "w-6 h-6", size })
     <circle cx="12" cy="12" r="1" fill="white"/>
   </svg>
 );
+
+// Trophy icon for completion screen
+export const TrophyIcon: React.FC<IconProps> = ({ className = "w-6 h-6", size }) => (
+  <svg 
+    width={size || 24} 
+    height={size || 24} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    className={className}
+  >
+    <path 
+      d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V7C19 8.1 18.1 9 17 9H15V10.29C15.63 10.63 16.1 11.26 16.1 12C16.1 13.1 15.2 14 14.1 14H9.9C8.8 14 7.9 13.1 7.9 12C7.9 11.26 8.37 10.63 9 10.29V9H7C5.9 9 5 8.1 5 7V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V7C7 7.55 7.45 8 8 8H16C16.55 8 17 7.55 17 7V6H7ZM9 12C9 12.55 9.45 13 10 13H14C14.55 13 15 12.55 15 12S14.55 11 14 11H10C9.45 11 9 11.45 9 12Z" 
+      fill="currentColor"
+    />
+  </svg>
+);
+
+// Share icon for sharing functionality
+export const ShareIcon: React.FC<IconProps> = ({ className = "w-6 h-6", size }) => (
+  <svg 
+    width={size || 24} 
+    height={size || 24} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    className={className}
+  >
+    <path 
+      d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.92 18 21.92S20.92 20.61 20.92 19 19.61 16.08 18 16.08Z" 
+      fill="currentColor"
+    />
+  </svg>
+);

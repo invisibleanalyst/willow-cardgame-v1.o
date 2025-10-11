@@ -23,9 +23,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       if (savedTheme && (savedTheme === 'dark' || savedTheme === 'light')) {
         setThemeState(savedTheme);
       } else {
-        // Check system preference
-        const systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-        setThemeState(systemTheme);
+        // Default to dark mode for new users
+        setThemeState('dark');
       }
     } catch (error) {
       // Fallback to dark theme if localStorage is not available

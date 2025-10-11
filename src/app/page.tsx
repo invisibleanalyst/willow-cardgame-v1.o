@@ -190,7 +190,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 lg:mb-16 px-4 sm:px-6"
           >
-            <Link href="/category-selection" className="btn-willow text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-4 font-craftwork-heavy w-full sm:w-auto max-w-sm sm:max-w-none min-h-[48px] sm:min-h-[52px] flex items-center justify-center gap-2">
+            <Link href="/category-selection" className="btn-willow text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-4 font-craftwork font-medium w-full sm:w-auto max-w-sm sm:max-w-none min-h-[48px] sm:min-h-[52px] flex items-center justify-center gap-2">
               <span>Start Playing Now</span>
               <ArrowUpRightIcon className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
             </Link>
@@ -205,9 +205,9 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-center"
+            className="text-center py-8"
           >
-            <p className="font-craftwork text-theme-secondary text-sm mb-2">
+            <p className="font-craftwork text-theme-secondary text-sm mb-4">
               Join 1,000+ couples already deepening their connection
             </p>
             <div className="flex justify-center items-center gap-2">
@@ -227,35 +227,35 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 px-6 bg-black bg-opacity-20">
+      <section className="py-24 px-6 bg-black bg-opacity-20">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <h3 className="font-craftwork-heavy text-4xl mb-6 text-high-contrast">
+            <h3 className="font-craftwork-heavy text-4xl mb-8 text-high-contrast">
               How <span className="text-willow-green-contrast">Willow</span> Works
             </h3>
-            <p className="font-craftwork text-theme-secondary text-xl max-w-3xl mx-auto">
+            <p className="font-craftwork text-theme-secondary text-xl max-w-3xl mx-auto leading-relaxed pb-4">
               Three progressive tiers that take you from first-date butterflies to deep, meaningful connections
             </p>
           </motion.div>
 
           {/* Process Steps */}
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
+          <div className="grid md:grid-cols-3 gap-8 mb-24">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-center"
+              className="text-center p-6"
             >
-              <div className="w-16 h-16 bg-willow-green rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-willow-green rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-willow-dark font-bold text-2xl">1</span>
               </div>
-              <h4 className="font-craftwork-heavy text-xl mb-2 text-theme-primary">Swipe & Connect</h4>
-              <p className="font-craftwork text-theme-secondary">
+              <h4 className="font-craftwork-heavy text-xl mb-4 text-theme-primary">Swipe & Connect</h4>
+              <p className="font-craftwork text-theme-secondary leading-relaxed">
                 Swipe through prompts designed to spark conversation and break the ice
               </p>
             </motion.div>
@@ -263,13 +263,13 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-center"
+              className="text-center p-6"
             >
-              <div className="w-16 h-16 bg-willow-green rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-willow-green rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-willow-dark font-bold text-2xl">2</span>
               </div>
-              <h4 className="font-craftwork-heavy text-xl mb-2 text-theme-primary">Build Intimacy</h4>
-              <p className="font-craftwork text-theme-secondary">
+              <h4 className="font-craftwork-heavy text-xl mb-4 text-theme-primary">Build Intimacy</h4>
+              <p className="font-craftwork text-theme-secondary leading-relaxed">
                 Watch your connection deepen as you unlock more meaningful prompts
               </p>
             </motion.div>
@@ -277,13 +277,13 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-center"
+              className="text-center p-6"
             >
-              <div className="w-16 h-16 bg-willow-green rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-willow-green rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-willow-dark font-bold text-2xl">3</span>
               </div>
-              <h4 className="font-craftwork-heavy text-xl mb-2 text-theme-primary">Lock In Love</h4>
-              <p className="font-craftwork text-theme-secondary">
+              <h4 className="font-craftwork-heavy text-xl mb-4 text-theme-primary">Lock In Love</h4>
+              <p className="font-craftwork text-theme-secondary leading-relaxed">
                 Reach the deepest level of connection with prompts for committed couples
               </p>
             </motion.div>
@@ -391,14 +391,14 @@ export default function Home() {
                 <p className="font-craftwork text-theme-secondary mb-8 text-lg leading-relaxed">
                   Start your journey with Willow today and discover what meaningful connection feels like.
                 </p>
-                <Link 
+                <Link
                   href="/category-selection" 
-                  className="group inline-flex items-center gap-3 bg-willow-bright text-willow-dark px-8 py-4 rounded-2xl font-craftwork-heavy text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden"
+                  className="group inline-flex items-center gap-3 bg-willow-bright text-willow-dark px-8 py-4 rounded-2xl font-craftwork font-medium text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden"
                 >
                   {/* Subtle glow effect */}
                   <div className="absolute inset-0 bg-willow-bright opacity-20 blur-md group-hover:opacity-30 transition-opacity duration-300"></div>
                   <span className="relative z-10">Start Playing Now</span>
-                  <ArrowUpRightIcon className="w-5 h-5 relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                  <ArrowUpRightIcon className="w-4 h-4 sm:w-5 sm:h-5 relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                 </Link>
               </div>
             </div>
@@ -488,8 +488,8 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-willow-green bg-opacity-20 p-8 rounded-2xl border-2 border-willow-green relative"
             >
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <div className="bg-willow-green text-willow-dark px-4 py-1 rounded-full text-sm font-craftwork-heavy">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <div className="bg-willow-green text-willow-dark px-3 py-0.5 rounded-full text-xs font-craftwork">
                   Most Popular
                 </div>
               </div>
@@ -526,7 +526,7 @@ export default function Home() {
               </ul>
               <button 
                 onClick={() => handlePaymentClick('romantic-escape')}
-                className="w-full bg-white text-willow-dark border-2 border-white hover:bg-gray-100 hover:scale-105 transition-all duration-300 py-4 px-6 rounded-xl font-craftwork-heavy text-center block shadow-lg hover:shadow-xl min-h-[48px] flex items-center justify-center"
+                className="w-full bg-black text-white border-2 border-black hover:bg-gray-800 hover:border-gray-800 transition-all duration-300 py-3 px-6 rounded-xl font-craftwork font-medium text-sm text-center block shadow-lg hover:shadow-xl min-h-[48px] flex items-center justify-center"
               >
                 Get Romantic Escape
               </button>
@@ -539,8 +539,8 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="bg-gradient-to-br from-purple-600 to-pink-600 bg-opacity-20 p-8 rounded-2xl border-2 border-purple-500 relative"
             >
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-craftwork-heavy">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-0.5 rounded-full text-xs font-craftwork">
                   Premium
                 </div>
               </div>
@@ -577,7 +577,7 @@ export default function Home() {
               </ul>
               <button 
                 onClick={() => setShowVIPModal(true)}
-                className="w-full bg-white text-purple-600 border-2 border-white hover:bg-gray-100 hover:scale-105 transition-all duration-300 py-4 px-6 rounded-xl font-craftwork-heavy shadow-lg hover:shadow-xl min-h-[48px] flex items-center justify-center"
+                className="w-full btn-willow-outline text-center block py-3 min-h-[48px] flex items-center justify-center"
               >
                 Request VIP Access
               </button>
