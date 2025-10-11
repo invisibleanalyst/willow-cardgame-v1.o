@@ -45,19 +45,21 @@ export default function AnswerInput({ onSubmit, isRecording, setIsRecording }: A
     recognition.maxAlternatives = 1;
 
     recognition.onstart = () => {
-      console.log('Speech recognition started');
+      console.log('🎤 Speech recognition started successfully');
       setErrorMessage(null);
     };
 
     recognition.onresult = (event: any) => {
+      console.log('🎤 Speech recognition result:', event.results);
       const transcript = event.results[0][0].transcript;
+      console.log('🎤 Transcript:', transcript);
       setAnswer(transcript);
       setIsRecording(false);
       setErrorMessage(null);
     };
 
     recognition.onerror = (event: any) => {
-      console.error('Speech recognition error:', event.error);
+      console.error('❌ Speech recognition error:', event.error);
       setIsRecording(false);
       
       switch (event.error) {
@@ -80,14 +82,12 @@ export default function AnswerInput({ onSubmit, isRecording, setIsRecording }: A
     };
 
     recognition.onend = () => {
+      console.log('🎤 Speech recognition ended');
       setIsRecording(false);
     };
 
     setRecognition(recognition);
     setSpeechSupported(true);
-
-    // Test microphone permission
-    testMicrophonePermission();
   }, [setIsRecording]);
 
   const testMicrophonePermission = async () => {
@@ -115,20 +115,23 @@ export default function AnswerInput({ onSubmit, isRecording, setIsRecording }: A
       return;
     }
 
-    // Check microphone permission first
-    if (microphonePermission === 'denied') {
-      setErrorMessage('Microphone permission denied. Please allow microphone access in your browser settings.');
-      return;
-    }
-
-    // For mobile devices, we need to ensure the user gesture is recent
+    // Request microphone permission when user clicks the button
     try {
+      console.log('Requesting microphone permission...');
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      console.log('Microphone permission granted');
+      setMicrophonePermission('granted');
+      stream.getTracks().forEach(track => track.stop());
+      
+      // Now start speech recognition
+      console.log('Starting speech recognition...');
       recognition.start();
       setIsRecording(true);
       setErrorMessage(null);
     } catch (error) {
-      console.error('Failed to start speech recognition:', error);
-      setErrorMessage('Failed to start speech recognition. Please try again.');
+      console.error('Microphone permission denied or error:', error);
+      setMicrophonePermission('denied');
+      setErrorMessage('Microphone permission denied. Please allow microphone access and try again.');
       setIsRecording(false);
     }
   };
@@ -167,12 +170,11 @@ export default function AnswerInput({ onSubmit, isRecording, setIsRecording }: A
           type="button"
           onClick={handleVoiceInput}
           className={`voice-button ${isRecording ? 'recording' : ''} ${
-            !speechSupported || microphonePermission === 'denied' ? 'disabled' : ''
+            !speechSupported ? 'disabled' : ''
           }`}
-          disabled={!speechSupported || microphonePermission === 'denied'}
+          disabled={!speechSupported}
           title={
             !speechSupported ? 'Not Supported' :
-            microphonePermission === 'denied' ? 'Permission Denied' :
             isRecording ? 'Listening...' : 'Voice Input'
           }
         >
