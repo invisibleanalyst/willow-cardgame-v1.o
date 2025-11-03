@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { UsersIcon, HeartIcon, ArrowRightIcon, SparkIcon, ConnectionIcon, MessageIcon, MicrophoneIcon } from '@/components/Icons';
+import { UsersIcon, HeartIcon, ArrowRightIcon, SparkIcon, ConnectionIcon, MessageIcon, MicrophoneIcon, ConnectionIconNew } from '@/components/Icons';
 import ThemeToggle from '@/components/ThemeToggle';
 
 export default function CategorySelectionPage() {
@@ -85,7 +85,7 @@ export default function CategorySelectionPage() {
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <UsersIcon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                    <ConnectionIconNew className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                   </div>
 
                   {/* Title */}

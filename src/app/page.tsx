@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { HeartIcon, SwirlIcon, FlameIcon, ArrowRightIcon, StarIcon, PlayIcon, UsersIcon, CheckIcon, ArrowUpRightIcon, ConnectionIcon, GrowthIcon, SparkIcon, FlowIcon, MessageIcon, BrainIcon, TargetIcon, XIcon, InstagramIcon, TikTokIcon, SecretsIcon } from '@/components/Icons';
+import { HeartIcon, SwirlIcon, FlameIcon, ArrowRightIcon, StarIcon, PlayIcon, UsersIcon, CheckIcon, ArrowUpRightIcon, ConnectionIcon, GrowthIcon, SparkIcon, FlowIcon, MessageIcon, BrainIcon, TargetIcon, XIcon, InstagramIcon, TikTokIcon, SecretsIcon, ConnectionIconNew } from '@/components/Icons';
 import ThemeToggle from '@/components/ThemeToggle';
 import VIPFormModal from '@/components/payments/VIPFormModal';
 import dynamic from 'next/dynamic';
@@ -13,6 +13,11 @@ const PaymentModal = dynamic(() => import('@/components/payments/PaymentModal'),
 });
 
 export default function Home() {
+  // Temporary flag to hide complex landing page sections
+  const HIDE_COMPLEX_SECTIONS = true;
+  // Temporary flag to hide dark mode toggle
+  const HIDE_DARK_MODE = true;
+  
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
@@ -111,7 +116,7 @@ export default function Home() {
           <h1 className="font-craftwork-heavy text-xl sm:text-2xl text-willow-green">Willow</h1>
         </Link>
         <div className="flex items-center gap-2 sm:gap-3">
-          <ThemeToggle />
+          {!HIDE_DARK_MODE && <ThemeToggle />}
           <Link href="/category-selection" className="btn-willow-outline text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-3 min-h-[40px] sm:min-h-[44px]">
             <span className="hidden sm:inline">What's Next? ↗</span>
             <span className="sm:hidden">Start ↗</span>
@@ -137,9 +142,10 @@ export default function Home() {
             className="mb-8"
           >
             <h1 className="font-craftwork-heavy text-3xl sm:text-5xl md:text-7xl mb-6 leading-tight text-high-contrast px-4">
-              Let's stop having{' '}
+              Stop the scroll.
+              <br />
               <span className="text-willow-green-contrast relative">
-                boring conversations
+                Start the spark.
                 <motion.div
                   className="absolute -bottom-2 left-0 right-0 h-1 bg-willow-green opacity-30"
                   initial={{ scaleX: 0 }}
@@ -147,9 +153,6 @@ export default function Home() {
                   transition={{ delay: 1, duration: 0.8 }}
                 />
               </span>
-              <br />
-              Let's start having{' '}
-              <span className="text-willow-green-contrast">unforgettable moments</span>
             </h1>
           </motion.div>
 
@@ -161,11 +164,7 @@ export default function Home() {
             className="mb-12"
           >
             <p className="font-craftwork text-lg sm:text-xl md:text-2xl text-theme-secondary mb-6 max-w-3xl mx-auto leading-relaxed px-4">
-              Let's create{' '}
-              <span className="text-accent-high-contrast font-medium">real laughter</span>{' '}
-              and{' '}
-              <span className="text-accent-high-contrast font-medium">genuine connection</span>{' '}
-              through 150+ prompts that actually work
+              Rediscover what real connection feels like — one prompt at a time.
             </p>
             
             {/* Key Benefits */}
@@ -289,7 +288,7 @@ export default function Home() {
                     className="space-y-4"
                   >
                     <p className="font-craftwork text-theme-secondary text-base sm:text-lg leading-relaxed">
-                      Each prompt is a <span className="text-willow-green font-medium">carefully crafted key</span> that unlocks conversations you've never had before.
+                      Every prompt is crafted to spark honesty, laughter, and real connection — all free, because connection shouldn’t cost a thing.
                     </p>
                     
                     <div className="flex flex-wrap justify-center gap-4 text-sm">
@@ -324,6 +323,7 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
+      {!HIDE_COMPLEX_SECTIONS && (
       <section className="py-24 px-6 bg-black bg-opacity-20">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -387,9 +387,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+      )}
 
 
       {/* Early Access Section */}
+      {!HIDE_COMPLEX_SECTIONS && (
       <section className="py-20 px-6 bg-black relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -502,8 +504,10 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+      )}
 
       {/* Free Sample Section */}
+      {!HIDE_COMPLEX_SECTIONS && (
       <section className="py-20 px-6 bg-black bg-opacity-30">
         <div className="max-w-4xl mx-auto">
         <motion.div
@@ -551,7 +555,7 @@ export default function Home() {
                   transition={{ duration: 0.6 }}
                   className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg"
                 >
-                  <UsersIcon className="w-6 h-6 text-white" />
+                  <ConnectionIconNew className="w-6 h-6 text-white" />
                 </motion.div>
                 <h4 className="font-craftwork-heavy text-lg mb-3 text-theme-primary text-center">Squad Vibes</h4>
                 <div className="bg-theme/20 backdrop-blur-sm p-4 rounded-xl border border-theme/20">
@@ -674,8 +678,10 @@ export default function Home() {
         </motion.div>
         </div>
       </section>
+      )}
 
       {/* Pricing Section */}
+      {!HIDE_COMPLEX_SECTIONS && (
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -836,6 +842,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      )}
 
       {/* Beta Sign-up - Redesigned */}
       <section className="py-20 px-6 bg-black bg-opacity-40">
@@ -846,10 +853,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h3 className="font-craftwork-heavy text-4xl mb-6 text-high-contrast">
-              Be Part of the <span className="text-willow-green-contrast">Conversation</span> Revolution
+              The world's tired of small talk. Let's bring back real connection.
             </h3>
             <p className="font-craftwork text-theme-secondary text-xl mb-8 max-w-2xl mx-auto">
-              We're building something special. Join our early community and help shape the future of meaningful conversations.
+              I'm building a space where real connection thrives — one honest prompt at a time. Join our beta and be part of something truly human.
             </p>
             
             <div className="bg-theme bg-opacity-40 backdrop-blur-md p-8 rounded-2xl border border-theme max-w-md mx-auto">
@@ -903,7 +910,7 @@ export default function Home() {
               <h5 className="font-craftwork-heavy text-lg mb-4">Company</h5>
               <ul className="space-y-2">
                 <li><a href="#" className="font-craftwork text-willow-gray hover:text-willow-green">Updates</a></li>
-                <li><a href="#" className="font-craftwork text-willow-gray hover:text-willow-green">Feedback</a></li>
+                {/* <li><a href="#" className="font-craftwork text-willow-gray hover:text-willow-green">Feedback</a></li> */}
               </ul>
             </div>
             
