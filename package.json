@@ -1,0 +1,47 @@
+{
+  "name": "willow-talk-edition",
+  "version": "1.0.0",
+  "description": "Willow Talk Edition - Premium relationship connection platform",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --fix",
+    "build:production": "next build && next export",
+    "analyze": "ANALYZE=true next build",
+    "type-check": "tsc --noEmit",
+    "test:build": "npm run build && npm run start",
+    "clean": "rm -rf .next out dist",
+    "precommit": "npm run lint && npm run type-check"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^5.0.0",
+    "@supabase/supabase-js": "^2.75.0",
+    "autoprefixer": "^10.4.21",
+    "dotenv": "^17.2.3",
+    "framer-motion": "^11.0.0",
+    "next": "15.0.0",
+    "next-pwa": "^5.6.0",
+    "openai": "^4.104.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-paystack": "^6.0.0",
+    "workbox-webpack-plugin": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "15.0.0",
+    "postcss": "^8.0.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.0.0"
+  }
+}
