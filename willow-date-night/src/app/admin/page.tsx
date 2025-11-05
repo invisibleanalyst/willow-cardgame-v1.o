@@ -8,6 +8,7 @@ export default function AdminPage() {
   const [selectedTier, setSelectedTier] = useState<'spark' | 'vibe' | 'lockin'>('spark');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   
+  // Get statistics from prompt system
   const stats = getPromptStats();
   const categories = promptManager.getCategoriesForTier(selectedTier);
   
