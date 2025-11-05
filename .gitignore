@@ -84,9 +84,8 @@ out/
 .nuxt
 dist
 
-# Gatsby files
+# Gatsby files (not applicable to Next.js, but keeping for reference)
 .cache/
-public
 
 # Storybook build outputs
 .out
