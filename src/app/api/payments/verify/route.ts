@@ -1,13 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
-// Initialize Supabase client
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
-
 export async function POST(req: NextRequest) {
+  // Initialize Supabase client inside the handler
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  
+  const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
   try {
     // Temporarily disabled authentication for preview
     // const { userId } = auth();
@@ -50,28 +49,29 @@ export async function POST(req: NextRequest) {
 
       try {
         // Store user pack in Supabase
-        const { data, error } = await supabase
-          .from('user_packs')
-          .insert([
-            {
-              user_id: userId,
-              pack_type: metadata.packType,
-              amount_paid: amount / 100, // Convert back from kobo
-              reference,
-              status: 'active',
-              created_at: new Date().toISOString(),
-              updated_at: new Date().toISOString()
-            }
-          ])
-          .select();
+        if (supabase) {
+          const { data, error } = await supabase
+            .from('user_packs')
+            .insert([
+              {
+                user_id: userId,
+                pack_type: metadata.packType,
+                amount_paid: amount / 100, // Convert back from kobo
+                reference,
+                status: 'active',
+                created_at: new Date().toISOString(),
+                updated_at: new Date().toISOString()
+              }
+            ])
+            .select();
 
-        if (error) {
-          console.error('Supabase insert error:', error);
-          // Still return success for payment, but log the database error
+          if (error) {
+            console.error('Supabase insert error:', error);
+            // Still return success for payment, but log the database error
+          }
+
+          console.log('User pack stored successfully:', data);
         }
-
-        console.log('User pack stored successfully:', data);
-
       } catch (dbError) {
         console.error('Database error:', dbError);
         // Don't fail the payment verification if database fails

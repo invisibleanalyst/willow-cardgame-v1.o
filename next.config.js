@@ -1,13 +1,16 @@
-const withPWA = require('next-pwa')({
+const withPWA = require('@ducanh2912/next-pwa').default({
   dest: 'public',
   register: true,
   skipWaiting: true,
   disable: process.env.NODE_ENV === 'development',
-  scope: '/',
-  sw: 'sw.js',
+  cacheOnFrontEndNav: true,
+  aggressiveFrontEndNavCaching: true,
+  reloadOnOnline: true,
+  swcMinify: true,
   fallbacks: {
     document: '/offline',
   },
+  workboxOptions: {
   runtimeCaching: [
     {
       urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
@@ -147,6 +150,7 @@ const withPWA = require('next-pwa')({
       }
     }
   ]
+  }
 });
 
 /** @type {import('next').NextConfig} */

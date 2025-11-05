@@ -10,7 +10,7 @@ export default function AdminPage() {
   const stats = getPromptStats();
   const categories = ['squad', 'ride-or-die'];
   
-  const filteredPrompts = selectedCategory === 'all' 
+  const filteredPrompts: any[] = selectedCategory === 'all' 
     ? [
         ...getPromptsByCategoryAndTier('squad', selectedTier),
         ...getPromptsByCategoryAndTier('ride-or-die', selectedTier)

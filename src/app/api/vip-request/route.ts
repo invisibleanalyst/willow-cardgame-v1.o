@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
-// Initialize Supabase client
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
-
 export async function POST(req: NextRequest) {
+  // Initialize Supabase client inside the handler
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  
+  const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
+  
   try {
     const { email, feedback, tier, timestamp } = await req.json();
 
@@ -17,6 +17,14 @@ export async function POST(req: NextRequest) {
         { error: 'Email and tier are required' },
         { status: 400 }
       );
+    }
+
+    if (!supabase) {
+      console.warn('Supabase client not initialized - skipping VIP request storage');
+      return NextResponse.json({
+        success: true,
+        message: 'VIP request received (database not configured)'
+      });
     }
 
     // Store VIP request in Supabase

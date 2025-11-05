@@ -46,14 +46,14 @@ function GamePage() {
 
   // Filter prompts based on category
   const getFilteredPrompts = (tier: 'spark' | 'vibe' | 'lockin') => {
-    const tierPrompts = prompts[tier];
+    const tierPrompts = prompts[tier] as unknown as Prompt[];
     
     if (category === 'squad') {
       // For Squad Vibes, filter for friendship-appropriate questions
       return tierPrompts.filter(prompt => {
         // Check if prompt has categoryType and it's squad or both
-        if (prompt.categoryType) {
-          return prompt.categoryType === 'squad' || prompt.categoryType === 'both';
+        if (prompt.categoryType && ['squad', 'both'].includes(prompt.categoryType)) {
+          return true;
         }
         
         // Fallback to text-based filtering for existing prompts

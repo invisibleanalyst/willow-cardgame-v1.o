@@ -8,16 +8,26 @@
 import OpenAI from 'openai';
 import { createClient } from '@supabase/supabase-js';
 
-// Initialize OpenAI
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// Lazy initialization helpers
+let openaiInstance: OpenAI | null = null;
+let supabaseInstance: any | null = null;
 
-// Initialize Supabase
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
+function getOpenAI() {
+  if (!openaiInstance && process.env.OPENAI_API_KEY) {
+    openaiInstance = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  }
+  return openaiInstance;
+}
+
+function getSupabase() {
+  if (!supabaseInstance && process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) {
+    supabaseInstance = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL,
+      process.env.SUPABASE_SERVICE_ROLE_KEY
+    );
+  }
+  return supabaseInstance;
+}
 
 export interface PromptTemplate {
   id: string;
@@ -779,6 +789,9 @@ export class PromptGenerator {
     tier: 'spark' | 'vibe' | 'lockin',
     pack: 'free' | 'premium'
   ): Promise<GeneratedPrompt | null> {
+    const supabase = getSupabase();
+    if (!supabase) return null;
+    
     const { data, error } = await supabase
       .from('generated_prompts')
       .select('*')
@@ -820,6 +833,9 @@ export class PromptGenerator {
    * Generate prompt text using OpenAI
    */
   private async generateWithAI(template: PromptTemplate): Promise<string> {
+    const openai = getOpenAI();
+    if (!openai) return template.template;
+    
     const systemPrompt = this.getSystemPrompt(template);
     
     const completion = await openai.chat.completions.create({
@@ -866,6 +882,9 @@ export class PromptGenerator {
    * Check if generated text is unique
    */
   private async checkUniqueness(text: string): Promise<boolean> {
+    const supabase = getSupabase();
+    if (!supabase) return true; // Assume unique if no database
+    
     const normalizedText = text.toLowerCase().replace(/\s+/g, ' ').trim();
     
     const { data, error } = await supabase
@@ -885,6 +904,9 @@ export class PromptGenerator {
    * Store generated prompt in database
    */
   private async storePrompt(prompt: GeneratedPrompt): Promise<void> {
+    const supabase = getSupabase();
+    if (!supabase) return; // Skip if no database configured
+    
     const { error } = await supabase
       .from('generated_prompts')
       .insert([prompt]);
@@ -899,6 +921,9 @@ export class PromptGenerator {
    * Mark prompt as used
    */
   async markPromptAsUsed(promptId: string): Promise<void> {
+    const supabase = getSupabase();
+    if (!supabase) return; // Skip if no database configured
+    
     const { error } = await supabase
       .from('generated_prompts')
       .update({ used_count: 1 })
@@ -920,7 +945,10 @@ export class PromptGenerator {
    * Get statistics about generated prompts
    */
   async getStats(): Promise<any> {
-    const { data, error } = await supabase
+    const supabase = getSupabase();
+    if (!supabase) return null; // Return null if no database configured
+    
+    const { data, error} = await supabase
       .from('generated_prompts')
       .select('category, tier, pack, used_count');
 
@@ -937,7 +965,7 @@ export class PromptGenerator {
       unused: 0
     };
 
-    data.forEach(prompt => {
+    data.forEach((prompt: any) => {
       // By category
       if (!stats.byCategory[prompt.category]) {
         stats.byCategory[prompt.category] = 0;
